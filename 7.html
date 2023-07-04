@@ -1,0 +1,1747 @@
+<html class="pixel-ratio-1"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <meta http-equiv="Content-Security-Policy">
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <!--<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, width=device-width">-->
+    <script defer="" src="vendor/fundebug.2.4.2.min.js" apikey="7e434f55a040700062e0238a54376269cc81f5c0f57f367acbb289f50fb90647"></script>
+    <script defer="" src="vendor/bundle.min.js?1002"></script>
+    <script defer="" src="js/app.start.js?2211124124"></script>
+    <link rel="stylesheet" href="./files/all.min.css">
+    <title>家长云</title><script src="js/ctrl/mainCtrl.js?2211124124" async=""></script><script src="js/services/student/stuCorrect.js?2211124124" async=""></script><script src="js/directive/collapsible-list.js?2211124124" async=""></script><script src="js/ctrl/message/messageCtrl.js?2211124124" async=""></script><script src="js/services/module/activateAccount.js?2211124124" async=""></script><script src="js/ctrl/children/childrenCtrl.js?2211124124" async=""></script><script src="js/ctrl/person/personCtrl.js?2211124124" async=""></script><script src="vendor/angular-chart/Chart.min.js?2211124124" async=""></script><script src="vendor/angular-chart/angular-chart.min.js?2211124124" async=""></script><script src="page/children/studyTrack/studyTrack.js?2211124124" async=""></script><script src="js/ctrl/tfcenter/tfCenterCtrl.js?2211124124" async=""></script><script src="js/ctrl/parent/maintenanceCtrl.js?2211124124" async=""></script><script src="js/ctrl/homeCtrl.js?2211124124" async=""></script><script src="js/services/examSystem.js?2211124124" async=""></script><script src="js/ctrl/children/examSystem/examListCtrl.js?2211124124" async=""></script><script src="js/ctrl/children/examSystem/examInfoCtrl.js?2211124124" async=""></script><script src="js/services/$selectTeacher.js?2211124124" async=""></script><script src="js/services/$openResource-weike.js?2211124124" async=""></script><script src="js/ctrl/children/stuHomeworkTestResultCtrl.js?2211124124" async=""></script>
+</head>
+<body class="grade-a platform-browser platform-win32 platform-ready">
+<ion-nav-view id="appContainer" animation="slide-left-right" class="view-container" nav-view-transition="ios" nav-view-direction="none" nav-swipe=""><ion-view view-title="家长云" class="pane" state="main" nav-view="active" style="opacity: 1; transform: translate3d(0%, 0px, 0px);">
+    <ion-nav-view name="main-view" class="view-container" nav-view-transition="ios" nav-view-direction="forward" nav-swipe=""><ion-view view-title="家长云" class="pane" state="main.home" nav-view="cached" style="opacity: 0.9; transform: translate3d(-33%, 0px, 0px);">
+  <ion-header-bar ng-switch="tab" class="bb0 c-fff bc-balanced bar bar-header ng-hide" no-tap-scroll="true" ng-show="tab &amp;&amp; tab != 1 &amp;&amp; tab != 2 &amp;&amp; user.childS.ktinfo" style="">
+    <!-- ngSwitchWhen: 0 --><h1 ng-switch-when="0" class="title c-fff" style=""></h1><!-- end ngSwitchWhen:  -->
+    <!--<h1 ng-switch-when="2" class="title c-fff">家长学校</h1>-->
+  </ion-header-bar>
+  <basis-content>                    <div ng-show="!isLoaded" class="has-header center pa w b0 bc-fff z99 ng-hide" style="">                        <!-- ngIf: !dataError --><section ng-if="!dataError" class="p10 w100 bc-333333 c-fff tc br5" style="">                            <ion-spinner class="spinner-light spinner spinner-spiral" icon="spiral"><svg viewBox="0 0 64 64"><g><defs><linearGradient id="sGD" gradientUnits="userSpaceOnUse" x1="55" y1="46" x2="2" y2="46"><stop offset="0.1" class="stop1"></stop><stop offset="1" class="stop2"></stop></linearGradient></defs><g stroke-width="4" stroke-linecap="round" fill="none"><path stroke="url(#sGD)" d="M4,32 c0,15,12,28,28,28c8,0,16-4,21-9"></path><path d="M60,32 C60,16,47.464,4,32,4S4,16,4,32"></path><animateTransform values="0,32,32;360,32,32" attributeName="transform" type="rotate" repeatCount="indefinite" dur="750ms"></animateTransform></g></g></svg></ion-spinner>                            <div>正在加载</div>                        </section><!-- end ngIf: !dataError -->                        <!-- ngIf: dataError -->                    </div>                    <!-- ngIf: dataNone -->                    <section ng-transclude="">
+    <!-- ngIf: user.childS.ktinfo --><ion-content class="has-tabs bc-f5f5f5 scroll-content ionic-scroll scroll-content-false" ng-class="{'has-header': tab &amp;&amp; tab != 1 &amp;&amp; tab != 2}" scroll="false" ng-if="user.childS.ktinfo" style="">
+      <!-- ngIf: tab == 0 --><!-- ngInclude: 'js/ctrl/children/children.html' --><div ng-if="tab == 0" ng-controller="childrenCtrl" ng-include="'js/ctrl/children/children.html'" class="h" style=""><!-- ngIf: user.info.children.length --><div ng-if="user.info.children.length" class="bc-balanced pr" style="padding: 15px 0; height: 65px">
+  <button class="button button-clear pa t10 c-fff" ng-click="toggleChildList()" style="height: 35px; line-height: 39px; padding: 0; left: 10px">
+    <img ng-src="https://api.jiazhangyun.cn/public/school/images/default_head_s.png" class="w30 br50p fl mr5" style="margin-top: 4px" src="https://api.jiazhangyun.cn/public/school/images/default_head_s.png">
+    <div class="dp-ib va-m ws-no hidden to-ellipsis ng-binding" style="max-width: 50px"></div>
+  </button>
+  <span class="children-head-btn ell ng-binding" style="
+      margin: 0;
+      width: auto;
+      padding: 0 92px 0 105px;
+      border: 0;
+      font-size: 16px;
+    "></span>
+  <!--<span class="children-head-btn" ng-if="user.childS.realName && user.childS.gradeID && user.info.children.length > 0 && user.childS.ktinfo">
+        <span class="item-left" ng-class="{active: !typeTab}" ng-click="changeTypeTab(0)">
+            校内
+        </span>
+        <span class="item-right" ng-class="{active: typeTab}" ng-click="changeTypeTab(1)">
+            校外
+        </span>
+    </span>-->
+  <!-- ngIf: user.childS.ktinfo --><a class="pa h center t0" ng-if="user.childS.ktinfo" ng-href="#/main/dvCode" style="right: 48px; top: -1px" href="#/main/dvCode">
+    <img width="24" height="24" src="img/children/dvCode.png">
+  </a><!-- end ngIf: user.childS.ktinfo -->
+  <div class="pa c-fff r10 h t0 center" ng-click="indexScan()">
+    <i class="va-m icon icon-parentsCloud-scan pl5 f24"></i>
+  </div>
+</div><!-- end ngIf: user.info.children.length -->
+<!-- ngIf: user.childS.ktinfo.isDeprecated || user.childS.ktinfo.status == 3 || user.childS.ktinfo.status == 5 -->
+<!-- ngIf: user.childS.ktinfo.dataIsError -->
+<!-- ngIf: !user.childS.ktinfo.dataIsError && user.info.children.length > 0 && user.childS.ktinfo --><!-- ngInclude: 'page/children/ketang.html' --><div class="pa t0 b0 l0 r0 tf-position" ng-show="!user.childS.ktinfo.isDeprecated &amp;&amp; user.childS.ktinfo.status == 0" ng-if="!user.childS.ktinfo.dataIsError &amp;&amp; user.info.children.length > 0 &amp;&amp; user.childS.ktinfo" ng-include="'page/children/ketang.html'" ng-controller="studyTrack" style=""><!-- ngIf: !dataIsError && user.childS.realName && user.childS.gradeID --><ion-scroll class="pa t0 b0 w scroll-view ionic-scroll scroll-y" ng-if="!dataIsError &amp;&amp; user.childS.realName &amp;&amp; user.childS.gradeID"><div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);">
+  <!-- ngIf: unreadCount -->
+  <!-- ngIf: !hideSlide --><div class="bc-fff pr" ng-if="!hideSlide">
+    <ion-slides options="sliderOptions" slider="data.slider" style="height: 102px"><div class="swiper-container swiper-container-horizontal swiper-container-swipe"><div class="swiper-wrapper" ng-transclude="" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-active" ng-click="toFamousTeacher()" data-swiper-slide-index="0" style="width: 375px;">
+        <a style="float: left; width: 100%; height: 100%">
+          <img src="img/home/mxms.jpg" width="100%" style="display: block; width: 100%">
+        </a>
+      </div>
+      <div class="swiper-slide swiper-slide-next" ng-transclude="" ng-click="toFamousTeacher()" data-swiper-slide-index="0" style="width: 375px;">
+        <a style="float: left; width: 100%; height: 100%">
+          <img src="img/home/mxms.jpg" width="100%" style="display: block; width: 100%">
+        </a>
+      </div>
+      <!-- <ion-slide-page ng-click="toStudyReport()">
+        <a style="float: left; width: 100%; height: 100%">
+          <img
+            src="img/365/report_banner.jpg"
+            width="100%"
+            style="display: block; width: 100%"
+          />
+        </a>
+      </ion-slide-page> -->
+    <div class="swiper-slide swiper-slide-duplicate" ng-click="toFamousTeacher()" data-swiper-slide-index="0" style="width: 375px;">
+        <a style="float: left; width: 100%; height: 100%">
+          <img src="img/home/mxms.jpg" width="100%" style="display: block; width: 100%">
+        </a>
+      </div></div><div ng-hide="!showPager" class="swiper-pagination"></div><div ng-show="options.showArraw" class="swiper-button-next ng-hide"></div><div ng-show="options.showArraw" class="swiper-button-prev ng-hide"></div></div></ion-slides>
+    <div class="custom-swiper-pagination swiper-pagination swiper-pagination-clickable"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span></div>
+  </div><!-- end ngIf: !hideSlide -->
+  <!-- ngIf: situationData --><div class="bc-fff" ng-if="situationData" style="">
+    <div class="clearfix children-grid-list ptb20 plr15">
+      <div class="tc" ng-click="goKTModel('studyTrack')">
+        <p class="f18 c-balanced pt5 ng-binding">
+          82%
+        </p>
+        <p class="f14">测试正确率</p>
+      </div>
+      <div class="tc" ng-click="goKTModel('homework')">
+        <p class="f18 c-balanced pt5 ng-binding">
+          0%
+        </p>
+        <p class="f14">作业提交率</p>
+      </div>
+      <div class="tc" ng-click="goKTModel('wrongQuestion')">
+        <p class="f18 c-ff6269 pt5 ng-binding">0</p>
+        <p class="f14">未复习错题</p>
+      </div>
+    </div>
+  </div><!-- end ngIf: situationData -->
+  <div class="mb10 bc-fff pt10">
+    <div class="clearfix children-grid-list pt10 plr10">
+      <div class="pb20 pr" ng-click="goKTModel('correctRecord')" style="width: 25%">
+        <img src="img/365/bjcs.png" width="50" height="50">
+        <p class="tc mt10 f14" style="color: #333">班测记录</p>
+        <!-- ngIf: pointData.classRe != 0 -->
+      </div>
+      <div class="pb20 pr" ng-click="goKTModel('homework')" style="width: 25%">
+        <img src="img/365/zy.png" width="50" height="50">
+        <p class="tc mt10 f14" style="color: #333">作业</p>
+        <!-- ngIf: pointData.homework != 0 -->
+      </div>
+      <div class="pb20 pr" ng-click="goKTModel('KZHomework')" style="width: 25%">
+        <img src="img/365/kzkt.png" width="50" height="50">
+        <p class="tc mt10 f14" style="color: #333">空中课堂</p>
+        <!-- ngIf: pointData.KZunFinish != 0 -->
+      </div>
+      <div class="pb20 pr" style="margin-bottom: 15px; width: 25%" ng-click="goKTModel('examSystem')">
+        <img src="img/365/kscj.png" width="50" height="50">
+        <p class="tc mt10 f14" style="color: #333">考试成绩</p>
+        <!-- ngIf: pointData.exam != 0 -->
+      </div>
+      <a class="c-868686 fl w33p pr" style="margin-bottom: 15px; width: 25%" ng-href="#/main/famousTeacher" href="#/main/famousTeacher">
+        <img src="img/365/msk.png" width="50" height="50">
+        <p class="mt10 f14" style="color: #333">名师课</p>
+      </a>
+      <div class="pb20 pr" ng-click="goKTModel('classReview')" style="width: 25%">
+        <img src="img/365/ktfx.png" width="50" height="50">
+        <p class="mt10 f14" style="color: #333">课堂复习</p>
+      </div>
+      <!--<div class="pb30 pr" style="margin-bottom: 15px;" ng-click="goKTModel('wrongQuestion')">-->
+      <!--<img src="img/children/icon-wrongQuestion.png" width="32" height="32">-->
+      <!--<p class="mt10 f14">错题本</p>-->
+      <!--<span ng-if="pointData.wrong != 0" class="badge badge-assertive pa r11"-->
+      <!--style="position: absolute; top: -10px; font-size: 12px">{{pointData.wrong > 99 ? '99+' : pointData.wrong}}</span>-->
+      <!--</div>-->
+      <a class="c-868686 fl w33p pr" style="margin-bottom: 15px; width: 25%" ng-href="#/main/messageList" href="#/main/messageList">
+        <img src="img/365/jxhd.png" width="50" height="50">
+        <p class="mt10 f14" style="color: #333">家校互动</p>
+        <!-- ngIf: schoolMsgCount -->
+      </a>
+      <!-- <a class="c-868686 fl w33p pr" style="margin-bottom: 15px;width: 25%;" href="javascript:void(0)" ng-if="mingshiStatus.status" ng-click="toStudyReport()">
+                <img src="img/365/xqbg.png" width="50" height="50">
+                <p class="mt10 f14" style="color: #333;">学情报告</p>
+                <span class="badge badge-assertive pa r11" ng-if="report.total > 0" style="position: absolute; top: -10px; font-size: 12px; font-weight: normal; height: 22px; min-width: 22px;">
+                    {{report.total > 99 ? '99+' : report.total > 0 ? report.total : ''}}
+                </span>
+                <p style="color: #999; font-size: 12px;">{{report.lastReportTitle}}</p>
+            </a> -->
+      <!-- ngIf: showCardApprove --><div class="pb20 pr" ng-if="showCardApprove" ng-click="goCardApprove()" style="width: 25%">
+        <img src="img/365/ktfx.png" width="50" height="50">
+        <p class="mt10 f14" style="color: #333">电子家长端</p>
+      </div><!-- end ngIf: showCardApprove -->
+    </div>
+  </div>
+  <!-- ngIf: classList.length --><!-- ngInclude: 'page/children/studyTrack/studyTrack.html' --><div ng-if="classList.length" ng-include="'page/children/studyTrack/studyTrack.html'" class="" style=""><!-- ngIf: dynamicList.length>0 -->
+
+<!-- ngIf: dynamicList.length>0 -->
+
+
+<div class="bc-fff plr20 pt15 clearfix">
+    <span class="f18">学情跟踪</span>
+    <!-- ngIf: classList[1] -->
+</div>
+<div class="tsb-ic-wrp kt-bdTab bc-fff h50 lh50 mb10">
+    <ion-scroll class="w h50 hidden scroll-view ionic-scroll scroll-x" direction="x" scrollbar-x="false" scroll-fix="" delegate-handle="childSubject"><div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);">
+        <section class="ws-no f18">
+            <!-- ngRepeat: item in subjectList --><a class="tab-item w20p dp-ib ng-binding active" ng-class="{'active': item.id == currentSubject.id}" ng-repeat="item in subjectList" ng-click="choiceSubject(item.id,item.title)" style="">
+                语文
+            </a><!-- end ngRepeat: item in subjectList --><a class="tab-item w20p dp-ib ng-binding" ng-class="{'active': item.id == currentSubject.id}" ng-repeat="item in subjectList" ng-click="choiceSubject(item.id,item.title)" style="">
+                数学
+            </a><!-- end ngRepeat: item in subjectList --><a class="tab-item w20p dp-ib ng-binding" ng-class="{'active': item.id == currentSubject.id}" ng-repeat="item in subjectList" ng-click="choiceSubject(item.id,item.title)">
+                英语
+            </a><!-- end ngRepeat: item in subjectList --><a class="tab-item w20p dp-ib ng-binding" ng-class="{'active': item.id == currentSubject.id}" ng-repeat="item in subjectList" ng-click="choiceSubject(item.id,item.title)">
+                政治(道德与法治)
+            </a><!-- end ngRepeat: item in subjectList --><a class="tab-item w20p dp-ib ng-binding" ng-class="{'active': item.id == currentSubject.id}" ng-repeat="item in subjectList" ng-click="choiceSubject(item.id,item.title)">
+                物理
+            </a><!-- end ngRepeat: item in subjectList --><a class="tab-item w20p dp-ib ng-binding" ng-class="{'active': item.id == currentSubject.id}" ng-repeat="item in subjectList" ng-click="choiceSubject(item.id,item.title)">
+                化学
+            </a><!-- end ngRepeat: item in subjectList --><a class="tab-item w20p dp-ib ng-binding" ng-class="{'active': item.id == currentSubject.id}" ng-repeat="item in subjectList" ng-click="choiceSubject(item.id,item.title)">
+                生物
+            </a><!-- end ngRepeat: item in subjectList --><a class="tab-item w20p dp-ib ng-binding" ng-class="{'active': item.id == currentSubject.id}" ng-repeat="item in subjectList" ng-click="choiceSubject(item.id,item.title)">
+                地理
+            </a><!-- end ngRepeat: item in subjectList --><a class="tab-item w20p dp-ib ng-binding" ng-class="{'active': item.id == currentSubject.id}" ng-repeat="item in subjectList" ng-click="choiceSubject(item.id,item.title)">
+                历史
+            </a><!-- end ngRepeat: item in subjectList --><a class="tab-item w20p dp-ib ng-binding" ng-class="{'active': item.id == currentSubject.id}" ng-repeat="item in subjectList" ng-click="choiceSubject(item.id,item.title)">
+                信息技术
+            </a><!-- end ngRepeat: item in subjectList --><a class="tab-item w20p dp-ib ng-binding" ng-class="{'active': item.id == currentSubject.id}" ng-repeat="item in subjectList" ng-click="choiceSubject(item.id,item.title)">
+                科学
+            </a><!-- end ngRepeat: item in subjectList --><a class="tab-item w20p dp-ib ng-binding" ng-class="{'active': item.id == currentSubject.id}" ng-repeat="item in subjectList" ng-click="choiceSubject(item.id,item.title)">
+                体育与健康
+            </a><!-- end ngRepeat: item in subjectList --><a class="tab-item w20p dp-ib ng-binding" ng-class="{'active': item.id == currentSubject.id}" ng-repeat="item in subjectList" ng-click="choiceSubject(item.id,item.title)">
+                音乐
+            </a><!-- end ngRepeat: item in subjectList --><a class="tab-item w20p dp-ib ng-binding" ng-class="{'active': item.id == currentSubject.id}" ng-repeat="item in subjectList" ng-click="choiceSubject(item.id,item.title)">
+                美术
+            </a><!-- end ngRepeat: item in subjectList --><a class="tab-item w20p dp-ib ng-binding" ng-class="{'active': item.id == currentSubject.id}" ng-repeat="item in subjectList" ng-click="choiceSubject(item.id,item.title)">
+                艺术
+            </a><!-- end ngRepeat: item in subjectList --><a class="tab-item w20p dp-ib ng-binding" ng-class="{'active': item.id == currentSubject.id}" ng-repeat="item in subjectList" ng-click="choiceSubject(item.id,item.title)">
+                综合实践
+            </a><!-- end ngRepeat: item in subjectList --><a class="tab-item w20p dp-ib ng-binding" ng-class="{'active': item.id == currentSubject.id}" ng-repeat="item in subjectList" ng-click="choiceSubject(item.id,item.title)">
+                日语
+            </a><!-- end ngRepeat: item in subjectList --><a class="tab-item w20p dp-ib ng-binding" ng-class="{'active': item.id == currentSubject.id}" ng-repeat="item in subjectList" ng-click="choiceSubject(item.id,item.title)">
+                心理健康
+            </a><!-- end ngRepeat: item in subjectList --><a class="tab-item w20p dp-ib ng-binding" ng-class="{'active': item.id == currentSubject.id}" ng-repeat="item in subjectList" ng-click="choiceSubject(item.id,item.title)">
+                特色资源
+            </a><!-- end ngRepeat: item in subjectList -->
+        </section>
+    </div></ion-scroll>
+</div>
+<div>
+    <!-- ngIf: loadIndex >= 1 --><section class="plr10 pb10 pr" ng-if="loadIndex >= 1" style="">
+        <div class="bc-fff br5 bs-out p10">
+            <div class="pr">
+                <h5 class="tc">
+                    <div class="tl clearfix f16">
+                        近7天知识掌握情况
+                        <span ng-click="goKTModel('studyTrack')" class="fr f14 c-868686">查看更多&gt;</span>
+                    </div>
+                    <span class="pa l0 b0 c-868686 f12">得分率</span>
+                    <div class="pt10 c-666 f12 tr">
+                    <span class="dp-ib" style="height: 10px;width: 10px;vertical-align: baseline;border-radius: 3px;background:#72c141"></span>
+                        <span class="c-868686">个人</span>
+                        <span class="dp-ib ml10" style="height: 10px;width: 10px;vertical-align: baseline;border-radius: 3px;background:#c0c0c0"></span>
+                        <span class="pr10 c-868686">班级</span>
+                    </div>
+                </h5>
+            </div>
+            <div class="pr chartWrapper tc hidden" style="height: 250px;">
+                <ion-scroll scrollbar-x="false" delegate-handle="horizontal" direction="x" class="pa h hidden chartAreaWrapper scroll-view ionic-scroll scroll-x" style="left: 25px; right: 0px;" scroll-fix=""><div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);">
+                    <div style="position: absolute; height:250px; width: 1370px;">
+                        <div class="chart-container"><canvas class="chart chart-line" colours="[{'fillColor':'rgba(0, 0, 0, 0)','strokeColor':'#72c141','pointColor':'#72c141'},
+                                        {'fillColor':'rgba(0, 0, 0, 0)','strokeColor':'#c0c0c0','pointColor':'#c0c0c0'}]" options="knowledgeLine.option" data="knowledgeLine.data" labels="knowledgeLine.labels" height="250" width="1370" style="width: 1370px; height: 250px;">
+
+                        </canvas></div>
+                    </div>
+                </div></ion-scroll>
+                <div class="hiddenWrapper pa h hidden bc-fff l0 t0" style="height: 214px; width: 25px;">
+                    <div class="pa h" style="width: 1370px">
+                        <div class="chart-container"><canvas class="chart chart-line" colours="[{'fillColor':'rgba(0, 0, 0, 0)','strokeColor':'#72c141','pointColor':'#72c141'}]" options="hiddenWrapperO" data="knowledgeLine.dataH" labels="knowledgeLine.labels" height="232" width="1370" style="width: 1370px; height: 232px;">
+
+                        </canvas></div>
+                    </div>
+                </div>
+            </div>
+            <div class="df bc-eee br5 p10 tc mt10 c-363636 f14 mb10">
+                <div class=" flex1 br1-d-000">
+                    <div class="f16 c-balanced ng-binding">
+                        0
+                    </div>
+                    <div class="mt5">测试次数</div>
+                </div>
+                <div class=" flex1 br1-d-000">
+                    <div class="f16 c-balanced ng-binding">
+                        0%
+                    </div>
+                    <div class="mt5">正确率</div>
+                </div>
+                <div class="flex1">
+                    <div class="f16 c-balanced ng-binding">
+                        0
+                    </div>
+                    <div class="mt5">错题数</div>
+                </div>
+            </div>
+        </div>
+    </section><!-- end ngIf: loadIndex >= 1 -->
+    <!-- ngIf: loadIndex >= 2 --><section class="plr10 pb10 pr" ng-if="loadIndex >= 2" style="">
+        <div class="bc-fff br5 bs-out p10">
+            <div class="pr">
+                <h5 class="tc">
+                    <div class="tl clearfix f16">
+                        近7天课堂表现
+                        <span ng-click="goKTModel('studyTrack')" class="fr f14 c-868686">查看更多&gt;</span>
+                    </div>
+                    <span class="pa l0 b0 c-868686 f12">积分</span>
+                    <div class="pt10 c-868686 f12 tr">
+                    <span class="dp-ib" style="height: 10px;width: 10px;vertical-align: baseline;border-radius: 3px;background:#72c141"></span>
+                        <span class="c-868686">个人</span>
+                        <span class="dp-ib ml10" style="height: 10px;width: 10px;vertical-align: baseline;border-radius: 3px;background:#c0c0c0"></span>
+                        <span class="pr10 c-868686">班级</span>
+                    </div>
+                </h5>
+            </div>
+            <div class="pr chartWrapper tc hidden" style=" height: 250px;">
+                <ion-scroll scrollbar-x="false" class="pa h hidden chartAreaWrapper scroll-view ionic-scroll scroll-x" style="left: 18px; right: 0px;" direction="x" delegate-handle="horizontal2" scroll-fix=""><div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);">
+                    <div style="position: absolute; height:250px; width: 1370px;">
+                        <!-- ngIf: ketangLine.data.length --><div class="chart-container"><canvas ng-if="ketangLine.data.length" class="chart chart-line" colours="[{'fillColor':'rgba(0, 0, 0, 0)','strokeColor':'#72c141','pointColor':'#72c141'},
+                                        {'fillColor':'rgba(0, 0, 0, 0)','strokeColor':'#c0c0c0','pointColor':'#c0c0c0'}]" options="ketangLine.option" data="ketangLine.data" labels="ketangLine.labels" height="250" width="1370" style="width: 1370px; height: 250px;">
+
+                        </canvas></div><!-- end ngIf: ketangLine.data.length -->
+                    </div>
+                </div></ion-scroll>
+                <div class="hiddenWrapper pa h  hidden bc-fff l0 t0" style="height: 232px; width: 18px;">
+                    <div class="pa h" style="height: 250px;width: 1370px">
+                        <div class="chart-container"><canvas class="chart chart-line" colours="[{'fillColor':'rgba(0, 0, 0, 0)','strokeColor':'#72c141','pointColor':'#72c141'}]" options="hiddenWrapperO" data="ketangLine.dataH" labels="ketangLine.labels" height="250" width="1370" style="width: 1370px; height: 250px;">
+
+                        </canvas></div>
+                    </div>
+                </div>
+            </div>
+            <div class="df bc-eee br5 p10 tc mt10 c-363636 f14 mb10">
+                <div class=" flex1 br1-d-000">
+                    <div class="f16 c-balanced ng-binding">
+                        0
+                    </div>
+                    <div class="mt5">累计得分</div>
+                </div>
+                <div class=" flex1 br1-d-000">
+                    <div class="f16 c-balanced ng-binding">
+                        0
+                    </div>
+                    <div class="mt5">班级名次</div>
+                </div>
+                <div class=" flex1 br1-d-000">
+                    <div class="f16 c-balanced ng-binding">
+                        0
+                    </div>
+                    <div class="mt5">互动得分</div>
+                </div>
+                <div class="flex1">
+                    <div class="f16 c-balanced ng-binding">
+                        0
+                    </div>
+                    <div class="mt5">探究得分</div>
+                </div>
+            </div>
+        </div>
+    </section><!-- end ngIf: loadIndex >= 2 -->
+    <!-- ngIf: loadIndex >= 3 --><section class="plr10 pb10 pr" ng-if="loadIndex >= 3" style="">
+        <div class="bc-fff br5 bs-out p10">
+            <!-- ngIf: homework[currentClass.id][currentSubject.id][currentDate.date].isLoad --><div ng-if="homework[currentClass.id][currentSubject.id][currentDate.date].isLoad" class="tc">
+                <div class="pr">
+                    <h5 class="tc">
+                        <div class="tl clearfix f16">
+                            近7天作业提交情况
+                            <span ng-click="goKTModel('studyTrack')" class="fr f14 c-868686">查看更多&gt;</span>
+                        </div>
+                        <div class="pt10 c-666 f12 tr pr5">
+                            <span class="dp-ib" style="height: 10px;width: 10px;vertical-align: baseline;border-radius: 3px;background:#72c141"></span>
+                            <span class="c-868686">按时提交</span>
+                        </div>
+                    </h5>
+                </div>
+                <div class="pr">
+                <span class="pa t50p l50p w100 f25 c-FFA500 ng-binding" style="margin-top: -12px;margin-left: -50px;">
+                    0%
+                </span>
+                    <div class="chart-container"><canvas class="chart chart-doughnut" options="homeworkDoughnut.option" colours="[{'strokeColor':'#72c141'},{'strokeColor':'#c0c0c0'}]" data="homeworkDoughnut.data" labels="homeworkDoughnut.labels" style="pointer-events: none; width: 335px; height: 167px;" height="167" width="335">
+                    </canvas></div>
+                </div>
+            </div><!-- end ngIf: homework[currentClass.id][currentSubject.id][currentDate.date].isLoad -->
+
+            <div class="df bc-eee br5 p10 tc mt10 c-363636 f14 mb10">
+                <div class=" flex1 br1-d-000">
+                    <div class="f16 c-balanced ng-binding">
+                        0
+                    </div>
+                    <div class="mt5">作业总数</div>
+                </div>
+                <div class=" flex1 br1-d-000">
+                    <div class="f16 c-balanced ng-binding">
+                        0
+                    </div>
+                    <div class="mt5">按时提交数</div>
+                </div>
+                <div class=" flex1 br1-d-000">
+                    <div class="f16 c-balanced ng-binding">
+                        0
+                    </div>
+                    <div class="mt5">迟交数</div>
+                </div>
+                <div class="flex1">
+                    <div class="f16 c-balanced ng-binding">
+                        0
+                    </div>
+                    <div class="mt5">未交数</div>
+                </div>
+            </div>
+        </div>
+    </section><!-- end ngIf: loadIndex >= 3 -->
+</div>
+<!-- ngIf: loadIndex < 3 -->
+<!-- ngIf: loadIndex < 3 -->
+<!-- ngIf: loadIndex < 2 -->
+<!-- ngIf: loadIndex < 1 -->
+</div><!-- end ngIf: classList.length -->
+</div><div class="scroll-bar scroll-bar-v"><div class="scroll-bar-indicator scroll-bar-fade-out" style="transform: translate3d(0px, 0px, 0px) scaleY(1); height: 176px;"></div></div></ion-scroll><!-- end ngIf: !dataIsError && user.childS.realName && user.childS.gradeID -->
+</div><!-- end ngIf: !user.childS.ktinfo.dataIsError && user.info.children.length > 0 && user.childS.ktinfo -->
+
+<!--<ion-scroll class="w tf-position" ng-if="typeTab && user.info.children.length > 0 && user.childS.realName && user.childS.gradeID" style="position: absolute; top: 0; bottom:0;">
+    <div class="clearfix">
+        <div class="bg-full bg-fff plr10 mt10 mb10 pr">
+            <img src="img/365/rukou.jpg" class="w" />
+            <div class="pa h30 lh30 f20" style="color: #34260B; top: 50%; margin-top: -15px; left: 30px; right: 30px; font-weight: bold;">
+                365VIP服务
+                <a href="javascript:;" class="fr f14" ng-if="currentStatus.mingshi.status != 1" ng-click="go365()" style="color: #E3CD95;border-radius: 20px;background: #000;padding: 0 20px;">限时免费</a>
+                <a href="javascript:;" class="fr f14" ng-if="currentStatus.mingshi.status == 1" ng-click="go365()" style="color: #E3CD95;border-radius: 20px;background: #000;padding: 0 20px;">会员权益</a>
+            </div>
+        </div>
+
+        <div class="bg-full bc-fff">
+            <div class="kt-grid bc-fff" style="padding: 0 8px 13px 6px;">
+                <div class="grid-item" style="border: none;width: 50%;height: auto;">
+                    <a href="javascript:void(0)" ng-click="toXXKJModel('incorrectExer')" style="height: 100%; padding: 0; display: block; float: left;">
+                        <div class="bc-fff td-n pr w h fl" style="padding: 0 5px;">
+                            <p class="f13" style="position: absolute; left: 10px; top: 3px; color: #4D4D4D;">近七天错题动态</p>
+                            <img src="img/home/cuoti.png" style="width: 65%; float: left; background: #A8DBF7; padding-top: 25px;">
+                            <div class="lh16 c-666 ng-binding f14 pr" style="position:absolute; right: 2px; width: 35%; height: 100%; color: #fff; background: #4E85C5;">
+                                <div class="w" style="position: absolute; top: 50%; margin-top: -20px;">
+                                    <p class="f12">未复习</p>
+                                    <p><em class="f16">{{wrongExam.total}}</em>道</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item" style="border: none;width: 50%;height: auto;">
+                    <a href="javascript:void(0);" ng-click="toXXKJModel('exerRecord')" style="height: 100%; padding: 0; display: block; float: left;">
+                        <div class="bc-fff td-n pr w h fl" style="padding: 0 5px;">
+                            <p class="f13" style="position: absolute; left: 10px; top: 3px; color: #4D4D4D;">近七天练习记录</p>
+                            <img src="img/home/ceshi.png" style="width: 65%; float: left; background: #C3E8E2; padding-top: 25px;">
+                            <div class="lh16 c-666 ng-binding f14 pr" style="position:absolute; right: 2px; width: 35%; height: 100%; color: #fff; background: #2B927D;">
+                                <div class="w" style="position: absolute; top: 50%; margin-top: -20px;">
+                                    <p class="f12">已完成</p>
+                                    <p><em class="f16">{{examRecords.total}}</em>次</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-full bc-fff mt10">
+            <div class="clearfix lh40">
+                <h4 class="ml10 f17 fl">测评记录</h4>
+                <a class="fr mr10 f12" style="color: #808080;" href="javascript:void(0)" ng-click="toXXKJModel('evaluation')">更多测评<i class="icon ion-ios-arrow-right ml5"></i></a>
+            </div>
+            <div class="kt-grid bc-fff">
+                <div class="w clr" ng-repeat="item in evaluationView.list" ng-if="$index < 3">
+                    <ion-item class="f14" ng-if="item.sceneID == 139 || item.sceneID == 128" ng-click="toXXKJModel('studentReport', item)">
+                        <p class="fl" style="width: 85%;">
+                            【{{item.subject}}】
+                            <span class="hidden pr50 to-ellipsis f14" ng-bind-html="item.examName | trustHtml" style="color: #1A1A1A"></span>
+                        </p>
+                        <span class="fr" style="width: 15%;">
+                    <i class="icon ion-ios-arrow-right f18 tr fr" style="margin-top: 1px; color: #808080;"></i>
+                    <span class="mr5 fr" style="color:#E66051;">{{item.myScore}}分</span>
+                </span>
+                    </ion-item>
+                    <ion-item class="f14" ng-if="item.sceneID == 111" ng-click="toXXKJModel('studentReport', item)">
+                        <p class="fl" style="width: 85%;">
+                            <span class="hidden pr50 to-ellipsis f14" ng-bind-html="item.tagName | trustHtml" style="color: #1A1A1A"></span>
+                        </p>
+                        <span class="fr" style="width: 15%;">
+                    <i class="icon ion-ios-arrow-right f18 tr fr" style="margin-top: 1px; color: #808080;"></i>
+                    <span class="mr5 fr" style="color:#E66051;">{{item.myScore}}分</span>
+                </span>
+                    </ion-item>
+                </div>
+                <div class="kt-grid bc-fff tc" style="padding: 50px 0" ng-if="evaluationView.list.length <= 0">
+                    去<a href="javascript:void(0)" ng-click="toXXKJModel('evaluation')" style="color: #78c549;">诊断测评</a>吧，全面了解你的长项与薄弱项
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-full bc-fff mt10">
+            <div class="clearfix lh40">
+                <h4 class="ml10 f17 fl">我的课程</h4>
+                <a class="fr mr10 f12" style="color: #808080;" href="javascript:void(0)" ng-click="toCenter()">更多课程<i class="icon ion-ios-arrow-right ml5"></i></a>
+            </div>
+            <div class="kt-grid bc-fff" ng-if="currentStatus.joinStat.mingshiCourse == 1 || currentStatus.joinStat.syncCourse == 1 || currentStatus.joinStat.mathClearance == 1">
+                <div class="grid-item" style="border: none;width: 33.33%;" ng-if="currentStatus.joinStat.mingshiCourse == 1">
+                    <a class="td-n button button-small button-clear" ng-click="goTbj()">
+                        <img src="img/home/4.png" width="48" height="48">
+                        <div class="lh16 c-666 ng-binding f14">微课同步讲</div>
+                    </a>
+                </div>
+                <div class="grid-item" style="border: none;width: 33.33%;" ng-if="currentStatus.joinStat.syncCourse == 1">
+                    <a class="td-n button button-small button-clear" ng-click="toTBKC()">
+                        <img src="img/home/5.png" width="48" height="48">
+                        <div class="lh16 c-666 ng-binding f14">数学同步</div>
+                    </a>
+                </div>
+                <div class="grid-item" style="border: none;width: 33.33%;" ng-if="currentStatus.joinStat.mathClearance == 1">
+                    <a class="td-n button button-small button-clear" ng-click="getXTModel(104, '考点补查')">
+                        <img src="img/home/6.png" width="48" height="48">
+                        <div class="lh16 c-666 ng-binding f14">数学通关.赢</div>
+                    </a>
+                </div>
+                &lt;!&ndash;<div class="grid-item" style="border: none;width: 25%;" ng-if="currentStatus.joinStat.scoreCourse == 1">
+                    <a class="td-n button button-small button-clear">
+                        <img src="img/home/7.png" width="48" height="48">
+                        <div class="lh16 c-666 ng-binding f14">高考提分</div>
+                    </a>
+                </div>&ndash;&gt;
+            </div>
+            <div class="kt-grid bc-fff tc" style="padding: 50px 0" ng-if="currentStatus.joinStat.mingshiCourse == 0 && currentStatus.joinStat.syncCourse == 0 && currentStatus.joinStat.mathClearance == 0">
+                到<a href="javascript:void(0)" ng-click="toCenter()"  style="color: #78c549;">课程中心</a>选课学习吧，开启你的提分之旅
+            </div>
+        </div>
+
+        <div class="bg-full bc-fff mt10 pb10" ng-if="user.childS.schoolTypeID == 3 && currentStatus.joinStat.scoreCourse == 1">
+            <div class="clearfix lh40">
+                <h4 class="ml10 f17 fl">高考提分</h4>
+                <a class="fr mr10 f12" style="color: #808080;" ng-click="goTifen('main.home')">进入课程<i class="icon ion-ios-arrow-right ml5"></i></a>
+            </div>
+            <div class="kt-grid bc-fff" style="padding: 0 11px;">
+                <div class="grid-item pr g-item" style="padding: 0 5px; width: 33.3333%; border: 0;" ng-click="goTifen('main.home')">
+                    <div class="g-item-bg"></div>
+                    <div class="g-item-bg-top bc-fff"></div>
+                    <div class="td-n h g-item-main">
+                        <img src="img/home/14.png" width="48" height="48">
+                        <div class="lh16 c-666 ng-binding f14 lh25">总复习课程</div>
+                        <div class="lh16 c-666 ng-binding f12 lh20">完成<em class="f17" style="color: #4FC149;">{{recordData.recordDetail.reviewDoneTotal}}</em>/{{recordData.recordDetail.reviewTotal}}章节</div>
+                    </div>
+                </div>
+                <div class="grid-item pr g-item" style="padding: 0 5px; width: 33.3333%; border: 0;" ng-click="goTifen('main.examPaperList')">
+                    <div class="g-item-bg"></div>
+                    <div class="g-item-bg-top bc-fff"></div>
+                    <div class="td-n h g-item-main">
+                        <img src="img/home/15.png" width="48" height="48">
+                        <div class="lh16 c-666 ng-binding f14 lh25">精选测评</div>
+                        <div class="lh16 c-666 ng-binding f12 lh20"><em class="f17" style="color: #4FC149;">{{recordData.recordDetail.evaluationDoneTotal}}</em>份记录</div>
+                    </div>
+                </div>
+                <div class="grid-item pr g-item" style="padding: 0 5px; width: 33.3333%; border: 0;" ng-click="goTifen('main.userRank')">
+                    <div class="g-item-bg"></div>
+                    <div class="g-item-bg-top bc-fff"></div>
+                    <div class="td-n h g-item-main">
+                        <img src="img/home/16.png" width="48" height="48">
+                        <div class="lh16 ng-binding f14 lh25">
+                            <a class="c-666" ng-href="#/main/userRank">全网排名</a>
+                        </div>
+                        <div class="lh16 ng-binding f12 lh20" ng-if="recordDetail.mySelf.myRank">
+                            <a class="c-666">第<em class="f17" style="color: #FF765F;">{{recordDetail.mySelf.myRank ||0}}</em>名</a>
+                        </div>
+                        <div class="lh16 ng-binding f12 lh20" ng-if="!recordDetail.mySelf.myRank">
+                            <a class="c-666">暂无</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-scroll>-->
+
+<div ng-show="showChildList" class="pf z2 t0 w h ng-hide" style="background-color: rgba(0, 0, 0, 0.7)" ng-click="toggleChildList()"></div>
+<div class="pf b0 z99 w slide-in-up ng-enter" ng-class="{'ng-enter-active':showChildList}">
+  <ion-scroll class="h scroll-view ionic-scroll scroll-y" direction="y" style="max-height: 320px"><div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);">
+    <ion-list class="disable-user-behavior"><div class="list">
+      <!-- ngRepeat: child in user.info.children --><ion-item ng-repeat="child in user.info.children" class="item-avatar-left item-icon-right item" ng-click="selectChild($index)">
+        <img ng-src="https://api.jiazhangyun.cn/public/school/images/default_head_s.png" fall-back-src="img/default/default_head.jpg" src="https://api.jiazhangyun.cn/public/school/images/default_head_s.png">
+        <div class="lh40 ng-binding"></div>
+        <!-- <p>{{child.school}}</p> -->
+        <i class="icon ion-ios-arrow-right c-999"></i>
+      </ion-item><!-- end ngRepeat: child in user.info.children -->
+    </div></ion-list>
+  </div><div class="scroll-bar scroll-bar-v"><div class="scroll-bar-indicator scroll-bar-fade-out" style="transform: translate3d(0px, 0px, 0px) scaleY(1); height: 74px;"></div></div></ion-scroll>
+</div>
+<!-- ngIf: user.info.children.length == 0 -->
+<!-- ngIf: !user.childS.realName || !user.childS.gradeID -->
+</div><!-- end ngIf: tab == 0 -->
+      <!-- <div
+        ng-if="tab == 1"
+        ng-controller="tfCenterCtrl"
+        ng-include="'js/ctrl/tfcenter/tfCenter.html'"
+        class="h"
+      ></div> -->
+      <!-- ngIf: tab == 1 -->
+    </ion-content><!-- end ngIf: user.childS.ktinfo -->
+    <!-- ngIf: !user.childS.ktinfo -->
+  </section></basis-content>
+  <!-- ngIf: user.childS.ktinfo --><ion-tabs class="tabs-icon-top home-tabs tabs-background-light tabs-bottom tabs-standard" ng-if="user.childS.ktinfo" style=""><div class="tab-nav tabs">
+    <ion-tab ng-class="{'tab-item-active': tab == 0}" icon-on="icon-parentsCloud-hat" icon-off="icon-parentsCloud-hat-outline" ng-click="toggleTab(0)" class="tab-item-active"></ion-tab>
+    <!-- <ion-tab title="校外服务" ng-class="{'tab-item-active': tab == 1}"
+                 icon-on="icon-parentsCloud-blackboard"
+                 icon-off="icon-parentsCloud-blackboard-outline"
+                 ng-click="toggleTab(1)">
+        </ion-tab> -->
+    <ion-tab ng-class="{'tab-item-active': tab == 1}" icon-on="icon-parentsCloud-person" icon-off="icon-parentsCloud-person-outline" ng-click="toggleTab(1)"></ion-tab>
+  <a ng-class="{'has-badge':badge, 'tab-hidden':isHidden(), 'tab-item-active': isTabActive()}" ng-disabled="disabled()" class="tab-item tab-item-active" ng-click="toggleTab(0)" icon-on="icon-parentsCloud-hat" icon-off="icon-parentsCloud-hat-outline"><!-- ngIf: badge --><!-- ngIf: getIcon() --><i class="icon icon-parentsCloud-hat" ng-if="getIcon()"></i><!-- end ngIf: getIcon() --><span class="tab-title ng-binding" ng-bind-html="title">家校共育</span></a><a ng-class="{'has-badge':badge, 'tab-hidden':isHidden(), 'tab-item-active': isTabActive()}" ng-disabled="disabled()" class="tab-item" ng-click="toggleTab(1)" icon-on="icon-parentsCloud-person" icon-off="icon-parentsCloud-person-outline"><!-- ngIf: badge --><!-- ngIf: getIcon() --><i class="icon icon-parentsCloud-person-outline" ng-if="getIcon()"></i><!-- end ngIf: getIcon() --><span class="tab-title ng-binding" ng-bind-html="title">我</span></a></div></ion-tabs><!-- end ngIf: user.childS.ktinfo -->
+  <!-- ngIf: !user.childS.ktinfo -->
+</ion-view><ion-view class="pane" state="main.examList" nav-view="cached" style="opacity: 0.9; box-shadow: rgba(0, 0, 0, 0) 0px 0px 10px; transform: translate3d(-33%, 0px, 0px);">
+    <ion-header-bar align-title="center" class="c-fff bc-balanced bar bar-header" no-tap-scroll="true" title="考试">
+  <div ng-show="!hideLeft" class="buttons">
+    <button class="button-icon back-button button-clear pr20 ion-ios-arrow-left c-fff" ng-click="$goBack()">
+    </button>
+  </div>
+  <h1 class="title c-fff ng-binding" style="left: 47px; right: 47px;">考试</h1>
+  <div class="buttons" ng-transclude="" style="right:10px"></div>
+</ion-header-bar>
+    <basis-content>                    <div ng-show="!isLoaded" class="has-header center pa w b0 bc-fff z99 ng-hide" style="">                        <!-- ngIf: !dataError --><section ng-if="!dataError" class="p10 w100 bc-333333 c-fff tc br5" style="">                            <ion-spinner class="spinner-light spinner spinner-spiral" icon="spiral"><svg viewBox="0 0 64 64"><g><defs><linearGradient id="sGD" gradientUnits="userSpaceOnUse" x1="55" y1="46" x2="2" y2="46"><stop offset="0.1" class="stop1"></stop><stop offset="1" class="stop2"></stop></linearGradient></defs><g stroke-width="4" stroke-linecap="round" fill="none"><path stroke="url(#sGD)" d="M4,32 c0,15,12,28,28,28c8,0,16-4,21-9"></path><path d="M60,32 C60,16,47.464,4,32,4S4,16,4,32"></path><animateTransform values="0,32,32;360,32,32" attributeName="transform" type="rotate" repeatCount="indefinite" dur="750ms"></animateTransform></g></g></svg></ion-spinner>                            <div>正在加载</div>                        </section><!-- end ngIf: !dataError -->                        <!-- ngIf: dataError -->                    </div>                    <!-- ngIf: dataNone -->                    <section ng-transclude="">
+        <ion-content scroll="false" class="scroll-content ionic-scroll scroll-content-false  has-header">
+            <!-- ngIf: isOpenTms && terms && terms --><tab-slide-box tab="0" ng-if="isOpenTms &amp;&amp; terms &amp;&amp; terms" class="tabbed-slidebox" style="">
+                <div class="tsb-icons tabs-striped tabs-top">
+                    <div class="tsb-ic-wrp tabs tag-page" style="background: #ffffff; top: 0 !important;">
+                        <a class="ng-binding active">
+                            已结束&nbsp;4
+                        </a>
+                        <a class="ng-binding">
+                            正在进行&nbsp;0
+                        </a>
+                    </div>
+                </div>
+                <div class="slider" pager-click="true" show-pager="false" on-slide-changed="slideHasChanged($index)" style="padding-top: 5px; top: 44px; visibility: visible;"><div class="slider-slides" ng-transclude="" style="width: 750px;">
+                    <ion-slide class="slider-slide" data-index="0" style="width: 375px; left: 0px; transition-duration: 300ms; transform: translate(0px, 0px) translateZ(0px);">
+                        <ion-header-bar ng-show="isLoaded &amp;&amp; isOpenTms == 1 &amp;&amp; terms.length" class="mt-1 kt-bns bw0 p0 pt10 pb10 tc bs-out bar bar-header" style="border-top:none; line-height: 24px">
+                            <a class="bn-item-1 br1-ddd" ng-click="toggleChoice(1)">
+                                <span class="ng-binding">2022-2023学年下学期</span>
+                                <i class="icon ion-arrow-down-b" ng-class="{'ion-arrow-down-b':!isShow.term,'ion-arrow-up-b':isShow.term}"></i>
+                            </a>
+                            <a class="bn-item-1" ng-click="toggleChoice(0)">
+                                <span class="ng-binding">全部考试</span>
+                                <i class="icon ion-arrow-down-b" ng-class="{'ion-arrow-down-b':!isShow.type,'ion-arrow-up-b':isShow.type}"></i>
+                            </a>
+                        </ion-header-bar>
+                        <!--选择科目列表-->
+                        <div class="z2 pt40 pa w">
+                            <div class="pa w slide-in-bottom ng-enter" ng-class="{'ng-enter-active': isShow.term}">
+                                <div class="list">
+                                    <ion-scroll class="h scroll-view ionic-scroll scroll-y" direction="y" style="max-height: 320px"><div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);">
+                                        <!-- ngRepeat: item in terms --><label class="kt-radio-small item item-radio ng-not-empty ng-valid" name="termsRadio" ng-repeat="item in terms" icon="ion-ios-checkmark-empty" ng-model="currentTerm.id" ng-value="item.id" ng-click="choiceTerm(item.title, item.id)" value="670"><input type="radio" name="termsRadio" ng-value="item.id" ng-model="currentTerm.id" class="ng-pristine ng-untouched ng-valid ng-not-empty" value="670"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">
+                                            2022-2023学年下学期
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in terms --><label class="kt-radio-small item item-radio ng-not-empty ng-valid" name="termsRadio" ng-repeat="item in terms" icon="ion-ios-checkmark-empty" ng-model="currentTerm.id" ng-value="item.id" ng-click="choiceTerm(item.title, item.id)" value="669"><input type="radio" name="termsRadio" ng-value="item.id" ng-model="currentTerm.id" class="ng-pristine ng-untouched ng-valid ng-not-empty" value="669"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">
+                                            2022-2023学年上学期
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in terms --><label class="kt-radio-small item item-radio ng-not-empty ng-valid" name="termsRadio" ng-repeat="item in terms" icon="ion-ios-checkmark-empty" ng-model="currentTerm.id" ng-value="item.id" ng-click="choiceTerm(item.title, item.id)" value="638"><input type="radio" name="termsRadio" ng-value="item.id" ng-model="currentTerm.id" class="ng-pristine ng-untouched ng-valid ng-not-empty" value="638"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">
+                                            2021-2022学年下学期
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in terms --><label class="kt-radio-small item item-radio ng-not-empty ng-valid" name="termsRadio" ng-repeat="item in terms" icon="ion-ios-checkmark-empty" ng-model="currentTerm.id" ng-value="item.id" ng-click="choiceTerm(item.title, item.id)" value="637"><input type="radio" name="termsRadio" ng-value="item.id" ng-model="currentTerm.id" class="ng-pristine ng-untouched ng-valid ng-not-empty" value="637"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">
+                                            2021-2022学年上学期
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in terms --><label class="kt-radio-small item item-radio ng-not-empty ng-valid" name="termsRadio" ng-repeat="item in terms" icon="ion-ios-checkmark-empty" ng-model="currentTerm.id" ng-value="item.id" ng-click="choiceTerm(item.title, item.id)" value="558"><input type="radio" name="termsRadio" ng-value="item.id" ng-model="currentTerm.id" class="ng-pristine ng-untouched ng-valid ng-not-empty" value="558"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">
+                                            2020-2021学年下学期
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in terms --><label class="kt-radio-small item item-radio ng-not-empty ng-valid" name="termsRadio" ng-repeat="item in terms" icon="ion-ios-checkmark-empty" ng-model="currentTerm.id" ng-value="item.id" ng-click="choiceTerm(item.title, item.id)" value="557"><input type="radio" name="termsRadio" ng-value="item.id" ng-model="currentTerm.id" class="ng-pristine ng-untouched ng-valid ng-not-empty" value="557"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">
+                                            2020-2021学年上学期
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in terms --><label class="kt-radio-small item item-radio ng-not-empty ng-valid" name="termsRadio" ng-repeat="item in terms" icon="ion-ios-checkmark-empty" ng-model="currentTerm.id" ng-value="item.id" ng-click="choiceTerm(item.title, item.id)" value="336"><input type="radio" name="termsRadio" ng-value="item.id" ng-model="currentTerm.id" class="ng-pristine ng-untouched ng-valid ng-not-empty" value="336"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">
+                                            2019-2020学年下学期
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in terms --><label class="kt-radio-small item item-radio ng-not-empty ng-valid" name="termsRadio" ng-repeat="item in terms" icon="ion-ios-checkmark-empty" ng-model="currentTerm.id" ng-value="item.id" ng-click="choiceTerm(item.title, item.id)" value="335"><input type="radio" name="termsRadio" ng-value="item.id" ng-model="currentTerm.id" class="ng-pristine ng-untouched ng-valid ng-not-empty" value="335"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">
+                                            2019-2020学年上学期
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in terms -->
+                                    </div><div class="scroll-bar scroll-bar-v"><div class="scroll-bar-indicator scroll-bar-fade-out" style="transform: translate3d(0px, 0px, 0px) scaleY(1); height: 229px;"></div></div></ion-scroll>
+                                </div>
+                            </div>
+                            <!--选择班级列表-->
+                            <div class="pa w slide-in-bottom ng-enter" ng-class="{'ng-enter-active': isShow.type}">
+                                <div class="list">
+                                        <!-- ngRepeat: item in types --><label class="kt-radio-small item item-radio ng-empty ng-valid" name="typeRadio" ng-repeat="item in types" icon="ion-ios-checkmark-empty" ng-model="currentClass.id" ng-value="item.id" ng-click="choiceType($index)" value="0"><input type="radio" name="typeRadio" ng-value="item.id" ng-model="currentClass.id" class="ng-pristine ng-untouched ng-valid ng-empty" value="0"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">全部考试
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in types --><label class="kt-radio-small item item-radio ng-empty ng-valid" name="typeRadio" ng-repeat="item in types" icon="ion-ios-checkmark-empty" ng-model="currentClass.id" ng-value="item.id" ng-click="choiceType($index)" value="1"><input type="radio" name="typeRadio" ng-value="item.id" ng-model="currentClass.id" class="ng-pristine ng-untouched ng-valid ng-empty" value="1"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">周考
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in types --><label class="kt-radio-small item item-radio ng-empty ng-valid" name="typeRadio" ng-repeat="item in types" icon="ion-ios-checkmark-empty" ng-model="currentClass.id" ng-value="item.id" ng-click="choiceType($index)" value="2"><input type="radio" name="typeRadio" ng-value="item.id" ng-model="currentClass.id" class="ng-pristine ng-untouched ng-valid ng-empty" value="2"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">月考
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in types --><label class="kt-radio-small item item-radio ng-empty ng-valid" name="typeRadio" ng-repeat="item in types" icon="ion-ios-checkmark-empty" ng-model="currentClass.id" ng-value="item.id" ng-click="choiceType($index)" value="3"><input type="radio" name="typeRadio" ng-value="item.id" ng-model="currentClass.id" class="ng-pristine ng-untouched ng-valid ng-empty" value="3"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">单元考
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in types --><label class="kt-radio-small item item-radio ng-empty ng-valid" name="typeRadio" ng-repeat="item in types" icon="ion-ios-checkmark-empty" ng-model="currentClass.id" ng-value="item.id" ng-click="choiceType($index)" value="4"><input type="radio" name="typeRadio" ng-value="item.id" ng-model="currentClass.id" class="ng-pristine ng-untouched ng-valid ng-empty" value="4"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">期中
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in types --><label class="kt-radio-small item item-radio ng-empty ng-valid" name="typeRadio" ng-repeat="item in types" icon="ion-ios-checkmark-empty" ng-model="currentClass.id" ng-value="item.id" ng-click="choiceType($index)" value="5"><input type="radio" name="typeRadio" ng-value="item.id" ng-model="currentClass.id" class="ng-pristine ng-untouched ng-valid ng-empty" value="5"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">期末
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in types --><label class="kt-radio-small item item-radio ng-empty ng-valid" name="typeRadio" ng-repeat="item in types" icon="ion-ios-checkmark-empty" ng-model="currentClass.id" ng-value="item.id" ng-click="choiceType($index)" value="6"><input type="radio" name="typeRadio" ng-value="item.id" ng-model="currentClass.id" class="ng-pristine ng-untouched ng-valid ng-empty" value="6"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">学业水平模拟考试
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in types --><label class="kt-radio-small item item-radio ng-empty ng-valid" name="typeRadio" ng-repeat="item in types" icon="ion-ios-checkmark-empty" ng-model="currentClass.id" ng-value="item.id" ng-click="choiceType($index)" value="7"><input type="radio" name="typeRadio" ng-value="item.id" ng-model="currentClass.id" class="ng-pristine ng-untouched ng-valid ng-empty" value="7"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">升学模拟考试
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in types --><label class="kt-radio-small item item-radio ng-empty ng-valid" name="typeRadio" ng-repeat="item in types" icon="ion-ios-checkmark-empty" ng-model="currentClass.id" ng-value="item.id" ng-click="choiceType($index)" value="8"><input type="radio" name="typeRadio" ng-value="item.id" ng-model="currentClass.id" class="ng-pristine ng-untouched ng-valid ng-empty" value="8"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">联考
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in types -->
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-show="isShow.term || isShow.type" class="pa z1 t0 w h ng-hide" style="background-color: rgba(0, 0, 0, 0.4);"></div>
+                        <ion-scroll class="h pt40 scroll-view ionic-scroll scroll-y" direction="y"><div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);">
+                            <ion-list class="disable-user-behavior"><div class="list">
+                                <!-- ngRepeat: item in examList[currentType.id][currentTerm.id].list --><ion-item ng-repeat="item in examList[currentType.id][currentTerm.id].list" ng-click="toExamInfo(item)" class="item">
+                                    <h2 class="ng-binding">2022—2023学年度第二学期初一级期末考试</h2>
+                                    <p>
+                                        <i class="icon ion-clock"></i>
+                                        <span class="ng-binding">2023年06月29日 09:42</span>-
+                                        <span class="ng-binding">2023年07月04日 01:00</span>
+                                    </p>
+                                    <p>
+                                        <i class="icon ion-person"></i>
+                                        <span class="ng-binding">七年级</span>
+                                        <span class="dp-ib ml10 plr15 lh20 f13 b1-ddd bc-EEE br5 ng-binding">期末</span>
+                                    </p>
+                                    <div class="pt10 f14 c-999">
+                                        <!-- ngRepeat: subject in item.subjectList --><span ng-repeat="subject in item.subjectList" class="pr10 ng-binding">语文</span><!-- end ngRepeat: subject in item.subjectList --><span ng-repeat="subject in item.subjectList" class="pr10 ng-binding">数学</span><!-- end ngRepeat: subject in item.subjectList --><span ng-repeat="subject in item.subjectList" class="pr10 ng-binding">英语</span><!-- end ngRepeat: subject in item.subjectList --><span ng-repeat="subject in item.subjectList" class="pr10 ng-binding">政治(道德与法治)</span><!-- end ngRepeat: subject in item.subjectList --><span ng-repeat="subject in item.subjectList" class="pr10 ng-binding">生物</span><!-- end ngRepeat: subject in item.subjectList --><span ng-repeat="subject in item.subjectList" class="pr10 ng-binding">地理</span><!-- end ngRepeat: subject in item.subjectList --><span ng-repeat="subject in item.subjectList" class="pr10 ng-binding">历史</span><!-- end ngRepeat: subject in item.subjectList -->
+                                    </div>
+                                </ion-item><!-- end ngRepeat: item in examList[currentType.id][currentTerm.id].list --><ion-item ng-repeat="item in examList[currentType.id][currentTerm.id].list" ng-click="toExamInfo(item)" class="item">
+                                    <h2 class="ng-binding">第一到第三章练习</h2>
+                                    <p>
+                                        <i class="icon ion-clock"></i>
+                                        <span class="ng-binding">2023年06月07日 16:46</span>-
+                                        <span class="ng-binding">2023年06月08日 10:45</span>
+                                    </p>
+                                    <p>
+                                        <i class="icon ion-person"></i>
+                                        <span class="ng-binding">七年级</span>
+                                        <span class="dp-ib ml10 plr15 lh20 f13 b1-ddd bc-EEE br5 ng-binding">周考</span>
+                                    </p>
+                                    <div class="pt10 f14 c-999">
+                                        <!-- ngRepeat: subject in item.subjectList --><span ng-repeat="subject in item.subjectList" class="pr10 ng-binding">数学</span><!-- end ngRepeat: subject in item.subjectList -->
+                                    </div>
+                                </ion-item><!-- end ngRepeat: item in examList[currentType.id][currentTerm.id].list --><ion-item ng-repeat="item in examList[currentType.id][currentTerm.id].list" ng-click="toExamInfo(item)" class="item">
+                                    <h2 class="ng-binding">第四单元课堂练习</h2>
+                                    <p>
+                                        <i class="icon ion-clock"></i>
+                                        <span class="ng-binding">2023年05月18日 17:08</span>-
+                                        <span class="ng-binding">2023年05月25日 14:54</span>
+                                    </p>
+                                    <p>
+                                        <i class="icon ion-person"></i>
+                                        <span class="ng-binding">七年级</span>
+                                        <span class="dp-ib ml10 plr15 lh20 f13 b1-ddd bc-EEE br5 ng-binding">单元考</span>
+                                    </p>
+                                    <div class="pt10 f14 c-999">
+                                        <!-- ngRepeat: subject in item.subjectList --><span ng-repeat="subject in item.subjectList" class="pr10 ng-binding">数学</span><!-- end ngRepeat: subject in item.subjectList -->
+                                    </div>
+                                </ion-item><!-- end ngRepeat: item in examList[currentType.id][currentTerm.id].list --><ion-item ng-repeat="item in examList[currentType.id][currentTerm.id].list" ng-click="toExamInfo(item)" class="item">
+                                    <h2 class="ng-binding">2022—2023学年度第二学期初一级期中考试</h2>
+                                    <p>
+                                        <i class="icon ion-clock"></i>
+                                        <span class="ng-binding">2023年04月19日 10:34</span>-
+                                        <span class="ng-binding">2023年04月23日 21:28</span>
+                                    </p>
+                                    <p>
+                                        <i class="icon ion-person"></i>
+                                        <span class="ng-binding">七年级</span>
+                                        <span class="dp-ib ml10 plr15 lh20 f13 b1-ddd bc-EEE br5 ng-binding">期中</span>
+                                    </p>
+                                    <div class="pt10 f14 c-999">
+                                        <!-- ngRepeat: subject in item.subjectList --><span ng-repeat="subject in item.subjectList" class="pr10 ng-binding">语文</span><!-- end ngRepeat: subject in item.subjectList --><span ng-repeat="subject in item.subjectList" class="pr10 ng-binding">数学</span><!-- end ngRepeat: subject in item.subjectList --><span ng-repeat="subject in item.subjectList" class="pr10 ng-binding">英语</span><!-- end ngRepeat: subject in item.subjectList --><span ng-repeat="subject in item.subjectList" class="pr10 ng-binding">政治(道德与法治)</span><!-- end ngRepeat: subject in item.subjectList --><span ng-repeat="subject in item.subjectList" class="pr10 ng-binding">生物</span><!-- end ngRepeat: subject in item.subjectList --><span ng-repeat="subject in item.subjectList" class="pr10 ng-binding">地理</span><!-- end ngRepeat: subject in item.subjectList --><span ng-repeat="subject in item.subjectList" class="pr10 ng-binding">历史</span><!-- end ngRepeat: subject in item.subjectList -->
+                                    </div>
+                                </ion-item><!-- end ngRepeat: item in examList[currentType.id][currentTerm.id].list -->
+                            </div></ion-list>
+                            <!-- ngIf: !tab && examList[currentType.id][currentTerm.id].hasData -->
+                        </div><div class="scroll-bar scroll-bar-v"><div class="scroll-bar-indicator scroll-bar-fade-out" style="transform: translate3d(0px, 0px, 0px) scaleY(1); height: 0px;"></div></div></ion-scroll>
+                        <div class="point-center-position point-center ng-hide" ng-show="!examList[currentType.id][currentTerm.id].hasData &amp;&amp;
+                                        examList[currentType.id][currentTerm.id].list.length == 0" tip-text="暂没考试记录">                        <span>暂没考试记录</span>                    </div>
+                    </ion-slide>
+                    <ion-slide class="slider-slide" data-index="1" style="width: 375px; left: -375px; transition-duration: 300ms; transform: translate(375px, 0px) translateZ(0px);">
+                        <ion-header-bar ng-show="isLoaded &amp;&amp; isOpenTms == 1 &amp;&amp; terms.length" class="kt-bns bw0 p0 mt-1 pt10 pb10 tc bs-out bar bar-header" style="tborder-top:none; line-height: 24px">
+                            <a class="bn-item-1 br1-ddd" ng-click="toggleChoice(1)">
+                                <span class="ng-binding">2022-2023学年下学期</span>
+                                <i class="icon ion-arrow-down-b" ng-class="{'ion-arrow-down-b':!isShow.term,'ion-arrow-up-b':isShow.term}"></i>
+                            </a>
+                            <a class="bn-item-1" ng-click="toggleChoice(0)">
+                                <span class="ng-binding">全部考试</span>
+                                <i class="icon ion-arrow-down-b" ng-class="{'ion-arrow-down-b':!isShow.type,'ion-arrow-up-b':isShow.type}"></i>
+                            </a>
+                        </ion-header-bar>
+                        <div class="z2 pt40 pa w">
+
+                            <!--选择科目列表-->
+                            <div class="pa w slide-in-bottom ng-enter" ng-class="{'ng-enter-active': isShow.term}">
+                                <div class="list">
+                                    <ion-scroll class="h scroll-view ionic-scroll scroll-y" direction="y" style="max-height: 320px"><div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);">
+                                        <!-- ngRepeat: item in terms --><label class="kt-radio-small item item-radio ng-not-empty ng-valid" name="termsRadio" ng-repeat="item in terms" icon="ion-ios-checkmark-empty" ng-model="currentTerm.id" ng-value="item.id" ng-click="choiceTerm(item.title, item.id)" value="670"><input type="radio" name="termsRadio" ng-value="item.id" ng-model="currentTerm.id" class="ng-pristine ng-untouched ng-valid ng-not-empty" value="670"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">
+                                            2022-2023学年下学期
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in terms --><label class="kt-radio-small item item-radio ng-not-empty ng-valid" name="termsRadio" ng-repeat="item in terms" icon="ion-ios-checkmark-empty" ng-model="currentTerm.id" ng-value="item.id" ng-click="choiceTerm(item.title, item.id)" value="669"><input type="radio" name="termsRadio" ng-value="item.id" ng-model="currentTerm.id" class="ng-pristine ng-untouched ng-valid ng-not-empty" value="669"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">
+                                            2022-2023学年上学期
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in terms --><label class="kt-radio-small item item-radio ng-not-empty ng-valid" name="termsRadio" ng-repeat="item in terms" icon="ion-ios-checkmark-empty" ng-model="currentTerm.id" ng-value="item.id" ng-click="choiceTerm(item.title, item.id)" value="638"><input type="radio" name="termsRadio" ng-value="item.id" ng-model="currentTerm.id" class="ng-pristine ng-untouched ng-valid ng-not-empty" value="638"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">
+                                            2021-2022学年下学期
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in terms --><label class="kt-radio-small item item-radio ng-not-empty ng-valid" name="termsRadio" ng-repeat="item in terms" icon="ion-ios-checkmark-empty" ng-model="currentTerm.id" ng-value="item.id" ng-click="choiceTerm(item.title, item.id)" value="637"><input type="radio" name="termsRadio" ng-value="item.id" ng-model="currentTerm.id" class="ng-pristine ng-untouched ng-valid ng-not-empty" value="637"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">
+                                            2021-2022学年上学期
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in terms --><label class="kt-radio-small item item-radio ng-not-empty ng-valid" name="termsRadio" ng-repeat="item in terms" icon="ion-ios-checkmark-empty" ng-model="currentTerm.id" ng-value="item.id" ng-click="choiceTerm(item.title, item.id)" value="558"><input type="radio" name="termsRadio" ng-value="item.id" ng-model="currentTerm.id" class="ng-pristine ng-untouched ng-valid ng-not-empty" value="558"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">
+                                            2020-2021学年下学期
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in terms --><label class="kt-radio-small item item-radio ng-not-empty ng-valid" name="termsRadio" ng-repeat="item in terms" icon="ion-ios-checkmark-empty" ng-model="currentTerm.id" ng-value="item.id" ng-click="choiceTerm(item.title, item.id)" value="557"><input type="radio" name="termsRadio" ng-value="item.id" ng-model="currentTerm.id" class="ng-pristine ng-untouched ng-valid ng-not-empty" value="557"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">
+                                            2020-2021学年上学期
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in terms --><label class="kt-radio-small item item-radio ng-not-empty ng-valid" name="termsRadio" ng-repeat="item in terms" icon="ion-ios-checkmark-empty" ng-model="currentTerm.id" ng-value="item.id" ng-click="choiceTerm(item.title, item.id)" value="336"><input type="radio" name="termsRadio" ng-value="item.id" ng-model="currentTerm.id" class="ng-pristine ng-untouched ng-valid ng-not-empty" value="336"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">
+                                            2019-2020学年下学期
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in terms --><label class="kt-radio-small item item-radio ng-not-empty ng-valid" name="termsRadio" ng-repeat="item in terms" icon="ion-ios-checkmark-empty" ng-model="currentTerm.id" ng-value="item.id" ng-click="choiceTerm(item.title, item.id)" value="335"><input type="radio" name="termsRadio" ng-value="item.id" ng-model="currentTerm.id" class="ng-pristine ng-untouched ng-valid ng-not-empty" value="335"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">
+                                            2019-2020学年上学期
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in terms -->
+                                    </div><div class="scroll-bar scroll-bar-v"><div class="scroll-bar-indicator scroll-bar-fade-out" style="transform: translate3d(0px, 0px, 0px) scaleY(1); height: 229px;"></div></div></ion-scroll>
+                                </div>
+                            </div>
+                            <!--选择班级列表-->
+                            <div class="pa w slide-in-bottom ng-enter" ng-class="{'ng-enter-active': isShow.type}">
+                                <div class="list">
+                                    <ion-scroll class="h scroll-view ionic-scroll scroll-y" direction="y" style="max-height: 320px"><div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);">
+                                        <!-- ngRepeat: item in types --><label class="kt-radio-small item item-radio ng-empty ng-valid" name="typeRadio" ng-repeat="item in types" icon="ion-ios-checkmark-empty" ng-model="currentClass.id" ng-value="item.id" ng-click="choiceType($index)" value="0"><input type="radio" name="typeRadio" ng-value="item.id" ng-model="currentClass.id" class="ng-pristine ng-untouched ng-valid ng-empty" value="0"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">全部考试
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in types --><label class="kt-radio-small item item-radio ng-empty ng-valid" name="typeRadio" ng-repeat="item in types" icon="ion-ios-checkmark-empty" ng-model="currentClass.id" ng-value="item.id" ng-click="choiceType($index)" value="1"><input type="radio" name="typeRadio" ng-value="item.id" ng-model="currentClass.id" class="ng-pristine ng-untouched ng-valid ng-empty" value="1"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">周考
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in types --><label class="kt-radio-small item item-radio ng-empty ng-valid" name="typeRadio" ng-repeat="item in types" icon="ion-ios-checkmark-empty" ng-model="currentClass.id" ng-value="item.id" ng-click="choiceType($index)" value="2"><input type="radio" name="typeRadio" ng-value="item.id" ng-model="currentClass.id" class="ng-pristine ng-untouched ng-valid ng-empty" value="2"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">月考
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in types --><label class="kt-radio-small item item-radio ng-empty ng-valid" name="typeRadio" ng-repeat="item in types" icon="ion-ios-checkmark-empty" ng-model="currentClass.id" ng-value="item.id" ng-click="choiceType($index)" value="3"><input type="radio" name="typeRadio" ng-value="item.id" ng-model="currentClass.id" class="ng-pristine ng-untouched ng-valid ng-empty" value="3"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">单元考
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in types --><label class="kt-radio-small item item-radio ng-empty ng-valid" name="typeRadio" ng-repeat="item in types" icon="ion-ios-checkmark-empty" ng-model="currentClass.id" ng-value="item.id" ng-click="choiceType($index)" value="4"><input type="radio" name="typeRadio" ng-value="item.id" ng-model="currentClass.id" class="ng-pristine ng-untouched ng-valid ng-empty" value="4"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">期中
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in types --><label class="kt-radio-small item item-radio ng-empty ng-valid" name="typeRadio" ng-repeat="item in types" icon="ion-ios-checkmark-empty" ng-model="currentClass.id" ng-value="item.id" ng-click="choiceType($index)" value="5"><input type="radio" name="typeRadio" ng-value="item.id" ng-model="currentClass.id" class="ng-pristine ng-untouched ng-valid ng-empty" value="5"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">期末
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in types --><label class="kt-radio-small item item-radio ng-empty ng-valid" name="typeRadio" ng-repeat="item in types" icon="ion-ios-checkmark-empty" ng-model="currentClass.id" ng-value="item.id" ng-click="choiceType($index)" value="6"><input type="radio" name="typeRadio" ng-value="item.id" ng-model="currentClass.id" class="ng-pristine ng-untouched ng-valid ng-empty" value="6"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">学业水平模拟考试
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in types --><label class="kt-radio-small item item-radio ng-empty ng-valid" name="typeRadio" ng-repeat="item in types" icon="ion-ios-checkmark-empty" ng-model="currentClass.id" ng-value="item.id" ng-click="choiceType($index)" value="7"><input type="radio" name="typeRadio" ng-value="item.id" ng-model="currentClass.id" class="ng-pristine ng-untouched ng-valid ng-empty" value="7"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">升学模拟考试
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in types --><label class="kt-radio-small item item-radio ng-empty ng-valid" name="typeRadio" ng-repeat="item in types" icon="ion-ios-checkmark-empty" ng-model="currentClass.id" ng-value="item.id" ng-click="choiceType($index)" value="8"><input type="radio" name="typeRadio" ng-value="item.id" ng-model="currentClass.id" class="ng-pristine ng-untouched ng-valid ng-empty" value="8"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""><span class="ng-binding">联考
+                                        </span></div><i class="radio-icon disable-pointer-events icon ion-ios-checkmark-empty"></i></div></label><!-- end ngRepeat: item in types -->
+                                    </div><div class="scroll-bar scroll-bar-v"><div class="scroll-bar-indicator scroll-bar-fade-out" style="transform: translate3d(0px, 0px, 0px) scaleY(1); height: 203px;"></div></div></ion-scroll>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-show="isShow.type || isShow.term" class="pa z1 t0 w h ng-hide" style="background-color: rgba(0, 0, 0, 0.4);"></div>
+                        <ion-scroll class="h pt40 scroll-view ionic-scroll scroll-y" direction="y"><div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);">
+                            <ion-list class="disable-user-behavior"><div class="list">
+                                <!-- ngRepeat: item in examList[currentType.id][currentTerm.id].doingList -->
+                            </div></ion-list>
+                            <!-- ngIf: tab && examList[currentType.id][currentTerm.id].doingList.length && examList[currentType.id][currentTerm.id].hasDoingData -->
+                        </div><div class="scroll-bar scroll-bar-v"><div class="scroll-bar-indicator scroll-bar-fade-out" style="transform: translate3d(0px, 0px, 0px) scaleY(1); height: 0px;"></div></div></ion-scroll>
+                        <div class="point-center-position point-center" ng-show="!examList[currentType.id][currentTerm.id].hasDoingData &amp;&amp;
+                        examList[currentType.id][currentTerm.id].doingList.length == 0" tip-text="暂没考试记录">                        <span>暂没考试记录</span>                    </div>
+                    </ion-slide>
+                </div><div class="slider-pager hide"><!-- ngRepeat: slide in numSlides() track by $index --><span class="slider-pager-page active" ng-repeat="slide in numSlides() track by $index" ng-class="{active: $index == currentSlide}" ng-click="pagerClick($index)"><i class="icon ion-record"></i></span><!-- end ngRepeat: slide in numSlides() track by $index --><span class="slider-pager-page" ng-repeat="slide in numSlides() track by $index" ng-class="{active: $index == currentSlide}" ng-click="pagerClick($index)"><i class="icon ion-record"></i></span><!-- end ngRepeat: slide in numSlides() track by $index --></div></div>
+            </tab-slide-box><!-- end ngIf: isOpenTms && terms && terms -->
+            <!-- ngIf: !isOpenTms -->
+            <!-- ngIf: !terms || !terms.length -->
+        </ion-content>
+    </section></basis-content>
+</ion-view><ion-view class="pane" state="main.examInfo" nav-view="cached" style="opacity: 0.9; box-shadow: rgba(0, 0, 0, 0) 0px 0px 10px; transform: translate3d(-33%, 0px, 0px);">
+    <ion-header-bar align-title="center" class="c-fff bc-balanced bar bar-header has-tabs-top" no-tap-scroll="true" title="2022—2023学年度第二学期初一级期末考试">
+  <div ng-show="!hideLeft" class="buttons">
+    <button class="button-icon back-button button-clear pr20 ion-ios-arrow-left c-fff" ng-click="$goBack()">
+    </button>
+  </div>
+  <h1 class="title c-fff ng-binding" style="left: 47px; right: 5px;">2022—2023学年度第二学期初一级期末考试</h1>
+  <div class="buttons" ng-transclude="" style="right:10px"></div>
+</ion-header-bar>
+    <basis-content>                    <div ng-show="!isLoaded" class="has-header center pa w b0 bc-fff z99 ng-hide" style="">                        <!-- ngIf: !dataError --><section ng-if="!dataError" class="p10 w100 bc-333333 c-fff tc br5" style="">                            <ion-spinner class="spinner-light spinner spinner-spiral" icon="spiral"><svg viewBox="0 0 64 64"><g><defs><linearGradient id="sGD" gradientUnits="userSpaceOnUse" x1="55" y1="46" x2="2" y2="46"><stop offset="0.1" class="stop1"></stop><stop offset="1" class="stop2"></stop></linearGradient></defs><g stroke-width="4" stroke-linecap="round" fill="none"><path stroke="url(#sGD)" d="M4,32 c0,15,12,28,28,28c8,0,16-4,21-9"></path><path d="M60,32 C60,16,47.464,4,32,4S4,16,4,32"></path><animateTransform values="0,32,32;360,32,32" attributeName="transform" type="rotate" repeatCount="indefinite" dur="750ms"></animateTransform></g></g></svg></ion-spinner>                            <div>正在加载</div>                        </section><!-- end ngIf: !dataError -->                        <!-- ngIf: dataError -->                    </div>                    <!-- ngIf: dataNone -->                    <section ng-transclude="">
+        <ion-content scroll="false" class="scroll-content ionic-scroll scroll-content-false  has-header">
+            <!-- ngIf: examInfo.status == 1 -->
+            <!-- ngIf: examInfo.status != 1 --><div ng-if="examInfo.status != 1" class="" style="">
+                <!--<div class="kt-bns">-->
+                    <!--<a class="bn-item" ng-class="{ 'active': !tab}" ng-click="selectTab(0)">-->
+                        <!--{{examInfo.status != 3 ? '各科状态' : '各科成绩'}}-->
+                    <!--</a>-->
+                    <!--<a class="bn-item" ng-class="{ 'active': tab}" ng-click="selectTab(1)">-->
+                        <!--基本信息-->
+                    <!--</a>-->
+                <!--</div>-->
+                <div class="pa w b0 bc-fff" style="top: 0px">
+                    <div class="bc-f5f5f5 slider" active-slide="tab" show-pager="false" on-slide-changed="selectTab($index)" style="visibility: visible;"><div class="slider-slides" ng-transclude="" style="width: 750px;">
+                        <ion-slide class="p0 slider-slide" data-index="0" style="width: 375px; left: 0px; transition-duration: 300ms; transform: translate(0px, 0px) translateZ(0px);">
+                            <ion-scroll class="h scroll-view ionic-scroll scroll-y" direction="y"><div class="scroll" style="transform: translate3d(0px, -663px, 0px) scale(1);">
+                                <!-- ngRepeat: item in achievementList --><div ng-repeat="item in achievementList" class="dp-b m10 bc-fff">
+                                    <div class="p10" ng-click="toResult($event, item)">
+                                        <h2 class="f18 ng-binding">语文</h2>
+                                        <div class="ng-binding">2022—2023学年度第二学期期末考试  七年级语文答题卡</div>
+                                        <div class="f13 c-999">
+                                            <span class="ng-binding">共22题</span>
+                                            <span class="ng-binding">总129分</span>
+                                        </div>
+                                    </div>
+                                    <!-- ngIf: examInfo.status != 1 && !item.isOnline --><div ng-click="toResult($event, item)" ng-if="examInfo.status != 1 &amp;&amp; !item.isOnline">
+                                        <!-- ngIf: item.correctStatus == 0 -->
+                                        <!-- ngIf: item.correctStatus != 0 || (item.self != null && item.correctStatus == 1) --><div ng-if="item.correctStatus != 0 || (item.self != null &amp;&amp; item.correctStatus == 1)" class="row bt1-eee tc">
+                                            <!-- ngIf: item.publicUserTypeMap.indexOf('3') + 1 --><div class="col" ng-if="item.publicUserTypeMap.indexOf('3') + 1">
+                                                <div class="f16 c-main-i">
+                                                    <!-- ngIf: item.openStatus == 2 || item.openStatus == 3 --><span ng-if="item.openStatus == 2 || item.openStatus == 3"><!-- ngIf: item.myScore || item.myScore == 0 --><span ng-if="item.myScore || item.myScore == 0" class="ng-binding">104</span><!-- end ngIf: item.myScore || item.myScore == 0 -->
+                                                    <!-- ngIf: !(item.myScore || item.myScore == 0) --></span><!-- end ngIf: item.openStatus == 2 || item.openStatus == 3 --><!-- ngIf: item.openStatus == 3 && (item.myScore || item.myScore == 0) --><span ng-if="item.openStatus == 3 &amp;&amp; (item.myScore || item.myScore == 0)"> / </span><!-- end ngIf: item.openStatus == 3 && (item.myScore || item.myScore == 0) --><!-- ngIf: item.openStatus == 1 || item.openStatus == 3 --><span ng-if="item.openStatus == 1 || item.openStatus == 3" class="ng-binding">A</span><!-- end ngIf: item.openStatus == 1 || item.openStatus == 3 -->
+                                                </div>
+                                                <div class="f13 c-666 ng-binding">考试成绩</div>
+                                            </div><!-- end ngIf: item.publicUserTypeMap.indexOf('3') + 1 -->
+                                            <!-- ngIf: !(item.publicUserTypeMap.indexOf('3') + 1) -->
+                                        </div><!-- end ngIf: item.correctStatus != 0 || (item.self != null && item.correctStatus == 1) -->
+                                    </div><!-- end ngIf: examInfo.status != 1 && !item.isOnline -->
+                                    <!-- ngIf: item.isOnline -->
+                                </div><!-- end ngRepeat: item in achievementList --><div ng-repeat="item in achievementList" class="dp-b m10 bc-fff">
+                                    <div class="p10" ng-click="toResult($event, item)">
+                                        <h2 class="f18 ng-binding">数学</h2>
+                                        <div class="ng-binding">2022—2023学年度第二学期期末考试  七年级数学答题卡</div>
+                                        <div class="f13 c-999">
+                                            <span class="ng-binding">共19题</span>
+                                            <span class="ng-binding">总120分</span>
+                                        </div>
+                                    </div>
+                                    <!-- ngIf: examInfo.status != 1 && !item.isOnline --><div ng-click="toResult($event, item)" ng-if="examInfo.status != 1 &amp;&amp; !item.isOnline" class="">
+                                        <!-- ngIf: item.correctStatus == 0 -->
+                                        <!-- ngIf: item.correctStatus != 0 || (item.self != null && item.correctStatus == 1) --><div ng-if="item.correctStatus != 0 || (item.self != null &amp;&amp; item.correctStatus == 1)" class="row bt1-eee tc">
+                                            <!-- ngIf: item.publicUserTypeMap.indexOf('3') + 1 --><div class="col" ng-if="item.publicUserTypeMap.indexOf('3') + 1">
+                                                <div class="f16 c-main-i">
+                                                    <!-- ngIf: item.openStatus == 2 || item.openStatus == 3 --><span ng-if="item.openStatus == 2 || item.openStatus == 3"><!-- ngIf: item.myScore || item.myScore == 0 --><span ng-if="item.myScore || item.myScore == 0" class="ng-binding">94</span><!-- end ngIf: item.myScore || item.myScore == 0 -->
+                                                    <!-- ngIf: !(item.myScore || item.myScore == 0) --></span><!-- end ngIf: item.openStatus == 2 || item.openStatus == 3 --><!-- ngIf: item.openStatus == 3 && (item.myScore || item.myScore == 0) --><span ng-if="item.openStatus == 3 &amp;&amp; (item.myScore || item.myScore == 0)"> / </span><!-- end ngIf: item.openStatus == 3 && (item.myScore || item.myScore == 0) --><!-- ngIf: item.openStatus == 1 || item.openStatus == 3 --><span ng-if="item.openStatus == 1 || item.openStatus == 3" class="ng-binding">A</span><!-- end ngIf: item.openStatus == 1 || item.openStatus == 3 -->
+                                                </div>
+                                                <div class="f13 c-666 ng-binding">考试成绩</div>
+                                            </div><!-- end ngIf: item.publicUserTypeMap.indexOf('3') + 1 -->
+                                            <!-- ngIf: !(item.publicUserTypeMap.indexOf('3') + 1) -->
+                                        </div><!-- end ngIf: item.correctStatus != 0 || (item.self != null && item.correctStatus == 1) -->
+                                    </div><!-- end ngIf: examInfo.status != 1 && !item.isOnline -->
+                                    <!-- ngIf: item.isOnline -->
+                                </div><!-- end ngRepeat: item in achievementList --><div ng-repeat="item in achievementList" class="dp-b m10 bc-fff">
+                                    <div class="p10" ng-click="toResult($event, item)">
+                                        <h2 class="f18 ng-binding">英语</h2>
+                                        <div class="ng-binding">2022—2023学年度第二学期期末考试 七年级英语答题卡</div>
+                                        <div class="f13 c-999">
+                                            <span class="ng-binding">共42题</span>
+                                            <span class="ng-binding">总90分</span>
+                                        </div>
+                                    </div>
+                                    <!-- ngIf: examInfo.status != 1 && !item.isOnline --><div ng-click="toResult($event, item)" ng-if="examInfo.status != 1 &amp;&amp; !item.isOnline" class="">
+                                        <!-- ngIf: item.correctStatus == 0 -->
+                                        <!-- ngIf: item.correctStatus != 0 || (item.self != null && item.correctStatus == 1) --><div ng-if="item.correctStatus != 0 || (item.self != null &amp;&amp; item.correctStatus == 1)" class="row bt1-eee tc">
+                                            <!-- ngIf: item.publicUserTypeMap.indexOf('3') + 1 --><div class="col" ng-if="item.publicUserTypeMap.indexOf('3') + 1">
+                                                <div class="f16 c-main-i">
+                                                    <!-- ngIf: item.openStatus == 2 || item.openStatus == 3 --><span ng-if="item.openStatus == 2 || item.openStatus == 3"><!-- ngIf: item.myScore || item.myScore == 0 --><span ng-if="item.myScore || item.myScore == 0" class="ng-binding">80.5</span><!-- end ngIf: item.myScore || item.myScore == 0 -->
+                                                    <!-- ngIf: !(item.myScore || item.myScore == 0) --></span><!-- end ngIf: item.openStatus == 2 || item.openStatus == 3 --><!-- ngIf: item.openStatus == 3 && (item.myScore || item.myScore == 0) --><span ng-if="item.openStatus == 3 &amp;&amp; (item.myScore || item.myScore == 0)"> / </span><!-- end ngIf: item.openStatus == 3 && (item.myScore || item.myScore == 0) --><!-- ngIf: item.openStatus == 1 || item.openStatus == 3 --><span ng-if="item.openStatus == 1 || item.openStatus == 3" class="ng-binding">A</span><!-- end ngIf: item.openStatus == 1 || item.openStatus == 3 -->
+                                                </div>
+                                                <div class="f13 c-666 ng-binding">考试成绩</div>
+                                            </div><!-- end ngIf: item.publicUserTypeMap.indexOf('3') + 1 -->
+                                            <!-- ngIf: !(item.publicUserTypeMap.indexOf('3') + 1) -->
+                                        </div><!-- end ngIf: item.correctStatus != 0 || (item.self != null && item.correctStatus == 1) -->
+                                    </div><!-- end ngIf: examInfo.status != 1 && !item.isOnline -->
+                                    <!-- ngIf: item.isOnline -->
+                                </div><!-- end ngRepeat: item in achievementList --><div ng-repeat="item in achievementList" class="dp-b m10 bc-fff">
+                                    <div class="p10" ng-click="toResult($event, item)">
+                                        <h2 class="f18 ng-binding">政治(道德与法治)</h2>
+                                        <div class="ng-binding">2022—2023学年度第二学期期末考试  七年级道德与法治答题卡</div>
+                                        <div class="f13 c-999">
+                                            <span class="ng-binding">共23题</span>
+                                            <span class="ng-binding">总100分</span>
+                                        </div>
+                                    </div>
+                                    <!-- ngIf: examInfo.status != 1 && !item.isOnline --><div ng-click="toResult($event, item)" ng-if="examInfo.status != 1 &amp;&amp; !item.isOnline">
+                                        <!-- ngIf: item.correctStatus == 0 -->
+                                        <!-- ngIf: item.correctStatus != 0 || (item.self != null && item.correctStatus == 1) --><div ng-if="item.correctStatus != 0 || (item.self != null &amp;&amp; item.correctStatus == 1)" class="row bt1-eee tc">
+                                            <!-- ngIf: item.publicUserTypeMap.indexOf('3') + 1 --><div class="col" ng-if="item.publicUserTypeMap.indexOf('3') + 1">
+                                                <div class="f16 c-main-i">
+                                                    <!-- ngIf: item.openStatus == 2 || item.openStatus == 3 --><span ng-if="item.openStatus == 2 || item.openStatus == 3"><!-- ngIf: item.myScore || item.myScore == 0 --><span ng-if="item.myScore || item.myScore == 0" class="ng-binding">84</span><!-- end ngIf: item.myScore || item.myScore == 0 -->
+                                                    <!-- ngIf: !(item.myScore || item.myScore == 0) --></span><!-- end ngIf: item.openStatus == 2 || item.openStatus == 3 --><!-- ngIf: item.openStatus == 3 && (item.myScore || item.myScore == 0) --><span ng-if="item.openStatus == 3 &amp;&amp; (item.myScore || item.myScore == 0)"> / </span><!-- end ngIf: item.openStatus == 3 && (item.myScore || item.myScore == 0) --><!-- ngIf: item.openStatus == 1 || item.openStatus == 3 --><span ng-if="item.openStatus == 1 || item.openStatus == 3" class="ng-binding">A</span><!-- end ngIf: item.openStatus == 1 || item.openStatus == 3 -->
+                                                </div>
+                                                <div class="f13 c-666 ng-binding">考试成绩</div>
+                                            </div><!-- end ngIf: item.publicUserTypeMap.indexOf('3') + 1 -->
+                                            <!-- ngIf: !(item.publicUserTypeMap.indexOf('3') + 1) -->
+                                        </div><!-- end ngIf: item.correctStatus != 0 || (item.self != null && item.correctStatus == 1) -->
+                                    </div><!-- end ngIf: examInfo.status != 1 && !item.isOnline -->
+                                    <!-- ngIf: item.isOnline -->
+                                </div><!-- end ngRepeat: item in achievementList --><div ng-repeat="item in achievementList" class="dp-b m10 bc-fff">
+                                    <div class="p10" ng-click="toResult($event, item)">
+                                        <h2 class="f18 ng-binding">生物</h2>
+                                        <div class="ng-binding">2022—2023学年度第二学期期末考试 七年级生物答题卡</div>
+                                        <div class="f13 c-999">
+                                            <span class="ng-binding">共34题</span>
+                                            <span class="ng-binding">总100分</span>
+                                        </div>
+                                    </div>
+                                    <!-- ngIf: examInfo.status != 1 && !item.isOnline --><div ng-click="toResult($event, item)" ng-if="examInfo.status != 1 &amp;&amp; !item.isOnline">
+                                        <!-- ngIf: item.correctStatus == 0 -->
+                                        <!-- ngIf: item.correctStatus != 0 || (item.self != null && item.correctStatus == 1) --><div ng-if="item.correctStatus != 0 || (item.self != null &amp;&amp; item.correctStatus == 1)" class="row bt1-eee tc">
+                                            <!-- ngIf: item.publicUserTypeMap.indexOf('3') + 1 --><div class="col" ng-if="item.publicUserTypeMap.indexOf('3') + 1">
+                                                <div class="f16 c-main-i">
+                                                    <!-- ngIf: item.openStatus == 2 || item.openStatus == 3 --><span ng-if="item.openStatus == 2 || item.openStatus == 3"><!-- ngIf: item.myScore || item.myScore == 0 --><span ng-if="item.myScore || item.myScore == 0" class="ng-binding">94</span><!-- end ngIf: item.myScore || item.myScore == 0 -->
+                                                    <!-- ngIf: !(item.myScore || item.myScore == 0) --></span><!-- end ngIf: item.openStatus == 2 || item.openStatus == 3 --><!-- ngIf: item.openStatus == 3 && (item.myScore || item.myScore == 0) --><span ng-if="item.openStatus == 3 &amp;&amp; (item.myScore || item.myScore == 0)"> / </span><!-- end ngIf: item.openStatus == 3 && (item.myScore || item.myScore == 0) --><!-- ngIf: item.openStatus == 1 || item.openStatus == 3 --><span ng-if="item.openStatus == 1 || item.openStatus == 3" class="ng-binding">A</span><!-- end ngIf: item.openStatus == 1 || item.openStatus == 3 -->
+                                                </div>
+                                                <div class="f13 c-666 ng-binding">考试成绩</div>
+                                            </div><!-- end ngIf: item.publicUserTypeMap.indexOf('3') + 1 -->
+                                            <!-- ngIf: !(item.publicUserTypeMap.indexOf('3') + 1) -->
+                                        </div><!-- end ngIf: item.correctStatus != 0 || (item.self != null && item.correctStatus == 1) -->
+                                    </div><!-- end ngIf: examInfo.status != 1 && !item.isOnline -->
+                                    <!-- ngIf: item.isOnline -->
+                                </div><!-- end ngRepeat: item in achievementList --><div ng-repeat="item in achievementList" class="dp-b m10 bc-fff">
+                                    <div class="p10" ng-click="toResult($event, item)">
+                                        <h2 class="f18 ng-binding">地理</h2>
+                                        <div class="ng-binding">2022—2023学年度第二学期期末考试 七年级地理答题卡</div>
+                                        <div class="f13 c-999">
+                                            <span class="ng-binding">共32题</span>
+                                            <span class="ng-binding">总100分</span>
+                                        </div>
+                                    </div>
+                                    <!-- ngIf: examInfo.status != 1 && !item.isOnline --><div ng-click="toResult($event, item)" ng-if="examInfo.status != 1 &amp;&amp; !item.isOnline">
+                                        <!-- ngIf: item.correctStatus == 0 -->
+                                        <!-- ngIf: item.correctStatus != 0 || (item.self != null && item.correctStatus == 1) --><div ng-if="item.correctStatus != 0 || (item.self != null &amp;&amp; item.correctStatus == 1)" class="row bt1-eee tc">
+                                            <!-- ngIf: item.publicUserTypeMap.indexOf('3') + 1 --><div class="col" ng-if="item.publicUserTypeMap.indexOf('3') + 1">
+                                                <div class="f16 c-main-i">
+                                                    <!-- ngIf: item.openStatus == 2 || item.openStatus == 3 --><span ng-if="item.openStatus == 2 || item.openStatus == 3"><!-- ngIf: item.myScore || item.myScore == 0 --><span ng-if="item.myScore || item.myScore == 0" class="ng-binding">73</span><!-- end ngIf: item.myScore || item.myScore == 0 -->
+                                                    <!-- ngIf: !(item.myScore || item.myScore == 0) --></span><!-- end ngIf: item.openStatus == 2 || item.openStatus == 3 --><!-- ngIf: item.openStatus == 3 && (item.myScore || item.myScore == 0) --><span ng-if="item.openStatus == 3 &amp;&amp; (item.myScore || item.myScore == 0)"> / </span><!-- end ngIf: item.openStatus == 3 && (item.myScore || item.myScore == 0) --><!-- ngIf: item.openStatus == 1 || item.openStatus == 3 --><span ng-if="item.openStatus == 1 || item.openStatus == 3" class="ng-binding">A</span><!-- end ngIf: item.openStatus == 1 || item.openStatus == 3 -->
+                                                </div>
+                                                <div class="f13 c-666 ng-binding">考试成绩</div>
+                                            </div><!-- end ngIf: item.publicUserTypeMap.indexOf('3') + 1 -->
+                                            <!-- ngIf: !(item.publicUserTypeMap.indexOf('3') + 1) -->
+                                        </div><!-- end ngIf: item.correctStatus != 0 || (item.self != null && item.correctStatus == 1) -->
+                                    </div><!-- end ngIf: examInfo.status != 1 && !item.isOnline -->
+                                    <!-- ngIf: item.isOnline -->
+                                </div><!-- end ngRepeat: item in achievementList --><div ng-repeat="item in achievementList" class="dp-b m10 bc-fff">
+                                    <div class="p10" ng-click="toResult($event, item)">
+                                        <h2 class="f18 ng-binding">历史</h2>
+                                        <div class="ng-binding">2022—2023学年度第二学期期末考试  七年级历史答题卡</div>
+                                        <div class="f13 c-999">
+                                            <span class="ng-binding">共33题</span>
+                                            <span class="ng-binding">总100分</span>
+                                        </div>
+                                    </div>
+                                    <!-- ngIf: examInfo.status != 1 && !item.isOnline --><div ng-click="toResult($event, item)" ng-if="examInfo.status != 1 &amp;&amp; !item.isOnline">
+                                        <!-- ngIf: item.correctStatus == 0 -->
+                                        <!-- ngIf: item.correctStatus != 0 || (item.self != null && item.correctStatus == 1) --><div ng-if="item.correctStatus != 0 || (item.self != null &amp;&amp; item.correctStatus == 1)" class="row bt1-eee tc">
+                                            <!-- ngIf: item.publicUserTypeMap.indexOf('3') + 1 --><div class="col" ng-if="item.publicUserTypeMap.indexOf('3') + 1">
+                                                <div class="f16 c-main-i">
+                                                    <!-- ngIf: item.openStatus == 2 || item.openStatus == 3 --><span ng-if="item.openStatus == 2 || item.openStatus == 3"><!-- ngIf: item.myScore || item.myScore == 0 --><span ng-if="item.myScore || item.myScore == 0" class="ng-binding">89</span><!-- end ngIf: item.myScore || item.myScore == 0 -->
+                                                    <!-- ngIf: !(item.myScore || item.myScore == 0) --></span><!-- end ngIf: item.openStatus == 2 || item.openStatus == 3 --><!-- ngIf: item.openStatus == 3 && (item.myScore || item.myScore == 0) --><span ng-if="item.openStatus == 3 &amp;&amp; (item.myScore || item.myScore == 0)"> / </span><!-- end ngIf: item.openStatus == 3 && (item.myScore || item.myScore == 0) --><!-- ngIf: item.openStatus == 1 || item.openStatus == 3 --><span ng-if="item.openStatus == 1 || item.openStatus == 3" class="ng-binding">A</span><!-- end ngIf: item.openStatus == 1 || item.openStatus == 3 -->
+                                                </div>
+                                                <div class="f13 c-666 ng-binding">考试成绩</div>
+                                            </div><!-- end ngIf: item.publicUserTypeMap.indexOf('3') + 1 -->
+                                            <!-- ngIf: !(item.publicUserTypeMap.indexOf('3') + 1) -->
+                                        </div><!-- end ngIf: item.correctStatus != 0 || (item.self != null && item.correctStatus == 1) -->
+                                    </div><!-- end ngIf: examInfo.status != 1 && !item.isOnline -->
+                                    <!-- ngIf: item.isOnline -->
+                                </div><!-- end ngRepeat: item in achievementList -->
+                            </div><div class="scroll-bar scroll-bar-v"><div class="scroll-bar-indicator scroll-bar-fade-out" style="transform: translate3d(0px, 322px, 0px) scaleY(1); height: 303px;"></div></div></ion-scroll>
+                            <!-- ngIf: achievementList.length == 0 -->
+                        </ion-slide>
+                        <ion-slide class="p0 slider-slide" data-index="1" style="width: 375px; left: -375px; transition-duration: 300ms; transform: translate(375px, 0px) translateZ(0px);">
+                            <ion-scroll class="h scroll-view ionic-scroll scroll-y" direction="y"><div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);">
+                                <div class="m10">
+                                    <h2 class="f16 ng-binding">2022—2023学年度第二学期初一级期末考试</h2>
+                                    <div>
+                                        <span class="dp-ib plr15 lh20 f13 b1-ddd bc-fff br5 ng-binding">期末</span>
+                                        <span class="dp-ib plr15 lh20 f13 b1-ddd bc-fff br5 ng-binding">七年级</span>
+                                        <div class="mt5 f12 c-999">
+                                            <i class="icon ion-clock"></i>
+                                            <!-- ngIf: examInfo.status == 3 --><span ng-if="examInfo.status == 3" class="ng-binding">2023年06月29日 09:42-</span><!-- end ngIf: examInfo.status == 3 -->
+                                            <!-- ngIf: examInfo.status == 3 --><span ng-if="examInfo.status == 3" class="ng-binding">2023年07月04日 01:00</span><!-- end ngIf: examInfo.status == 3 -->
+                                            <!-- ngIf: examInfo.status != 3 -->
+                                        </div>
+                                    </div>
+                                    <!-- ngIf: testClassList && testClassList.length --><div ng-if="testClassList &amp;&amp; testClassList.length" class="mt10 bl1-ddd bt1-ddd  bc-fff tc">
+                                        <div class="row p0 bb1-ddd">
+                                            <div class="col p10 br1-ddd">班级</div>
+                                            <div class="col p10 br1-ddd ng-binding">全年级考生(1027)</div>
+                                        </div>
+                                        <!-- ngRepeat: item in testClassList --><div ng-repeat="item in testClassList">
+                                            <div class="row p0 bb1-ddd">
+                                                <div class="col p10 br1-ddd ng-binding">七年级1班</div>
+                                                <div class="col p10 br1-ddd ng-binding">52</div>
+                                            </div>
+                                        </div><!-- end ngRepeat: item in testClassList --><div ng-repeat="item in testClassList">
+                                            <div class="row p0 bb1-ddd">
+                                                <div class="col p10 br1-ddd ng-binding">七年级2班</div>
+                                                <div class="col p10 br1-ddd ng-binding">52</div>
+                                            </div>
+                                        </div><!-- end ngRepeat: item in testClassList --><div ng-repeat="item in testClassList">
+                                            <div class="row p0 bb1-ddd">
+                                                <div class="col p10 br1-ddd ng-binding">七年级3班</div>
+                                                <div class="col p10 br1-ddd ng-binding">53</div>
+                                            </div>
+                                        </div><!-- end ngRepeat: item in testClassList --><div ng-repeat="item in testClassList">
+                                            <div class="row p0 bb1-ddd">
+                                                <div class="col p10 br1-ddd ng-binding">七年级4班</div>
+                                                <div class="col p10 br1-ddd ng-binding">52</div>
+                                            </div>
+                                        </div><!-- end ngRepeat: item in testClassList --><div ng-repeat="item in testClassList">
+                                            <div class="row p0 bb1-ddd">
+                                                <div class="col p10 br1-ddd ng-binding">七年级5班</div>
+                                                <div class="col p10 br1-ddd ng-binding">52</div>
+                                            </div>
+                                        </div><!-- end ngRepeat: item in testClassList --><div ng-repeat="item in testClassList">
+                                            <div class="row p0 bb1-ddd">
+                                                <div class="col p10 br1-ddd ng-binding">七年级6班</div>
+                                                <div class="col p10 br1-ddd ng-binding">51</div>
+                                            </div>
+                                        </div><!-- end ngRepeat: item in testClassList --><div ng-repeat="item in testClassList">
+                                            <div class="row p0 bb1-ddd">
+                                                <div class="col p10 br1-ddd ng-binding">七年级7班</div>
+                                                <div class="col p10 br1-ddd ng-binding">49</div>
+                                            </div>
+                                        </div><!-- end ngRepeat: item in testClassList --><div ng-repeat="item in testClassList">
+                                            <div class="row p0 bb1-ddd">
+                                                <div class="col p10 br1-ddd ng-binding">七年级8班</div>
+                                                <div class="col p10 br1-ddd ng-binding">52</div>
+                                            </div>
+                                        </div><!-- end ngRepeat: item in testClassList --><div ng-repeat="item in testClassList">
+                                            <div class="row p0 bb1-ddd">
+                                                <div class="col p10 br1-ddd ng-binding">七年级9班</div>
+                                                <div class="col p10 br1-ddd ng-binding">50</div>
+                                            </div>
+                                        </div><!-- end ngRepeat: item in testClassList --><div ng-repeat="item in testClassList">
+                                            <div class="row p0 bb1-ddd">
+                                                <div class="col p10 br1-ddd ng-binding">七年级10班</div>
+                                                <div class="col p10 br1-ddd ng-binding">49</div>
+                                            </div>
+                                        </div><!-- end ngRepeat: item in testClassList --><div ng-repeat="item in testClassList">
+                                            <div class="row p0 bb1-ddd">
+                                                <div class="col p10 br1-ddd ng-binding">七年级11班</div>
+                                                <div class="col p10 br1-ddd ng-binding">48</div>
+                                            </div>
+                                        </div><!-- end ngRepeat: item in testClassList --><div ng-repeat="item in testClassList">
+                                            <div class="row p0 bb1-ddd">
+                                                <div class="col p10 br1-ddd ng-binding">七年级12班</div>
+                                                <div class="col p10 br1-ddd ng-binding">47</div>
+                                            </div>
+                                        </div><!-- end ngRepeat: item in testClassList --><div ng-repeat="item in testClassList">
+                                            <div class="row p0 bb1-ddd">
+                                                <div class="col p10 br1-ddd ng-binding">七年级13班</div>
+                                                <div class="col p10 br1-ddd ng-binding">46</div>
+                                            </div>
+                                        </div><!-- end ngRepeat: item in testClassList --><div ng-repeat="item in testClassList">
+                                            <div class="row p0 bb1-ddd">
+                                                <div class="col p10 br1-ddd ng-binding">七年级14班</div>
+                                                <div class="col p10 br1-ddd ng-binding">47</div>
+                                            </div>
+                                        </div><!-- end ngRepeat: item in testClassList --><div ng-repeat="item in testClassList">
+                                            <div class="row p0 bb1-ddd">
+                                                <div class="col p10 br1-ddd ng-binding">七年级15班</div>
+                                                <div class="col p10 br1-ddd ng-binding">49</div>
+                                            </div>
+                                        </div><!-- end ngRepeat: item in testClassList --><div ng-repeat="item in testClassList">
+                                            <div class="row p0 bb1-ddd">
+                                                <div class="col p10 br1-ddd ng-binding">七年级16班</div>
+                                                <div class="col p10 br1-ddd ng-binding">47</div>
+                                            </div>
+                                        </div><!-- end ngRepeat: item in testClassList --><div ng-repeat="item in testClassList">
+                                            <div class="row p0 bb1-ddd">
+                                                <div class="col p10 br1-ddd ng-binding">七年级17班</div>
+                                                <div class="col p10 br1-ddd ng-binding">46</div>
+                                            </div>
+                                        </div><!-- end ngRepeat: item in testClassList --><div ng-repeat="item in testClassList">
+                                            <div class="row p0 bb1-ddd">
+                                                <div class="col p10 br1-ddd ng-binding">七年级18班</div>
+                                                <div class="col p10 br1-ddd ng-binding">46</div>
+                                            </div>
+                                        </div><!-- end ngRepeat: item in testClassList --><div ng-repeat="item in testClassList">
+                                            <div class="row p0 bb1-ddd">
+                                                <div class="col p10 br1-ddd ng-binding">七年级19班</div>
+                                                <div class="col p10 br1-ddd ng-binding">47</div>
+                                            </div>
+                                        </div><!-- end ngRepeat: item in testClassList --><div ng-repeat="item in testClassList">
+                                            <div class="row p0 bb1-ddd">
+                                                <div class="col p10 br1-ddd ng-binding">七年级20班</div>
+                                                <div class="col p10 br1-ddd ng-binding">48</div>
+                                            </div>
+                                        </div><!-- end ngRepeat: item in testClassList --><div ng-repeat="item in testClassList">
+                                            <div class="row p0 bb1-ddd">
+                                                <div class="col p10 br1-ddd ng-binding">七年级21班</div>
+                                                <div class="col p10 br1-ddd ng-binding">44</div>
+                                            </div>
+                                        </div><!-- end ngRepeat: item in testClassList -->
+                                    </div><!-- end ngIf: testClassList && testClassList.length -->
+                                </div>
+                            </div><div class="scroll-bar scroll-bar-v"><div class="scroll-bar-indicator scroll-bar-fade-out" style="transform: translate3d(0px, 0px, 0px) scaleY(1); height: 399px;"></div></div></ion-scroll>
+                        </ion-slide>
+                    </div><div class="slider-pager hide"><!-- ngRepeat: slide in numSlides() track by $index --><span class="slider-pager-page active" ng-repeat="slide in numSlides() track by $index" ng-class="{active: $index == currentSlide}" ng-click="pagerClick($index)"><i class="icon ion-record"></i></span><!-- end ngRepeat: slide in numSlides() track by $index --><span class="slider-pager-page" ng-repeat="slide in numSlides() track by $index" ng-class="{active: $index == currentSlide}" ng-click="pagerClick($index)"><i class="icon ion-record"></i></span><!-- end ngRepeat: slide in numSlides() track by $index --></div></div>
+                </div>
+            </div><!-- end ngIf: examInfo.status != 1 -->
+        </ion-content>
+    </section></basis-content>
+</ion-view><ion-view class="pane" state="main.testResults" nav-view="active" style="opacity: 1; box-shadow: rgba(0, 0, 0, 0) 0px 0px 10px; transform: translate3d(0%, 0px, 0px);">
+  <ion-header-bar align-title="center" class="c-fff bc-balanced bar bar-header has-tabs-top" no-tap-scroll="true" title="测试结果">
+  <div ng-show="!hideLeft" class="buttons">
+    <button class="button-icon back-button button-clear pr20 ion-ios-arrow-left c-fff" ng-click="$goBack()">
+    </button>
+  </div>
+  <h1 class="title c-fff ng-binding" style="left: 47px; right: 47px;"> </h1>
+  <div class="buttons" ng-transclude="" style="right:10px"></div>
+</ion-header-bar>
+  <basis-content>                    <div ng-show="!isLoaded" class="has-header center pa w b0 bc-fff z99 ng-hide" style="">                        <!-- ngIf: !dataError --><section ng-if="!dataError" class="p10 w100 bc-333333 c-fff tc br5" style="">                            <ion-spinner class="spinner-light spinner spinner-spiral" icon="spiral"><svg viewBox="0 0 64 64"><g><defs><linearGradient id="sGD" gradientUnits="userSpaceOnUse" x1="55" y1="46" x2="2" y2="46"><stop offset="0.1" class="stop1"></stop><stop offset="1" class="stop2"></stop></linearGradient></defs><g stroke-width="4" stroke-linecap="round" fill="none"><path stroke="url(#sGD)" d="M4,32 c0,15,12,28,28,28c8,0,16-4,21-9"></path><path d="M60,32 C60,16,47.464,4,32,4S4,16,4,32"></path><animateTransform values="0,32,32;360,32,32" attributeName="transform" type="rotate" repeatCount="indefinite" dur="750ms"></animateTransform></g></g></svg></ion-spinner>                            <div>正在加载</div>                        </section><!-- end ngIf: !dataError -->                        <!-- ngIf: dataError -->                    </div>                    <!-- ngIf: dataNone -->                    <section ng-transclude="">
+    <ion-content ng-class="{'has-footer':(user.info.utype == 1||user.info.utype == 3) &amp;&amp; !hideAnswer}" class="scroll-content ionic-scroll has-header has-footer" style=""><div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);">
+      <!-- ngIf: ::!hideAnswer --><div class="f13 ptb10 tc bc-519F20" ng-if="::!hideAnswer" style="">
+        <p class="f18 c-fff ng-binding" ng-bind-html="detail.title">2022—2023学年度第二学期期末考试  七年级历史答题卡</p>
+        <!-- ngIf: !!detail.subheading -->
+        <!--<div class="col">-->
+        <!--用时:120分钟-->
+        <!--</div>-->
+      </div><!-- end ngIf: ::!hideAnswer -->
+      <!-- ngIf: ::!hideAnswer --><div class="p10 bc-main c-fff hidden" ng-if="::!hideAnswer" style="">
+        <div class="ng-binding">交卷时间:2023.06.29 12:35</div>
+        <div class="row pb0">
+          <!-- ngIf: $stateParams.openStatus != 1 && $stateParams.openStatus != 0 --><div class="col pb0 br1-fff" ng-if="$stateParams.openStatus != 1 &amp;&amp; $stateParams.openStatus != 0" ng-class="{'br1-fff': $stateParams.openStatus == 3}">
+            <div class="tc">得分</div>
+            <div class="tc lh50 f60 ng-binding">
+              100<span class="f14">分</span>
+            </div>
+          </div><!-- end ngIf: $stateParams.openStatus != 1 && $stateParams.openStatus != 0 -->
+          <!-- ngIf: $stateParams.openStatus == 1 || $stateParams.openStatus == 3 --><div class="col pb0" ng-if="$stateParams.openStatus == 1 || $stateParams.openStatus == 3">
+            <div class="tc">等级</div>
+            <div class="tc lh50 f60 ng-binding">A+</div>
+          </div><!-- end ngIf: $stateParams.openStatus == 1 || $stateParams.openStatus == 3 -->
+        </div>
+        <div class="fr">
+          <!-- ngIf: $stateParams.openStatus != 1 && $stateParams.openStatus != 0 --><div ng-if="$stateParams.openStatus != 1 &amp;&amp; $stateParams.openStatus != 0" class="ng-binding">
+            得分率:100%
+          </div><!-- end ngIf: $stateParams.openStatus != 1 && $stateParams.openStatus != 0 -->
+          <div class="ng-binding">总分:100分</div>
+<div class="ng-binding">Teriri赞赏你</div>
+        </div>
+      </div><!-- end ngIf: ::!hideAnswer -->
+      <!-- ngIf: ::hideAnswer -->
+
+      <!-- ngIf: !hideAnswer && $stateParams.openStatus != 1 && $stateParams.openStatus != 0 --><div class="p10 f13" ng-if="!hideAnswer &amp;&amp; $stateParams.openStatus != 1 &amp;&amp; $stateParams.openStatus != 0" style="">
+        <div class="dp-ib mr5">
+          <span class="dp-ib bc-main-i b1-balanced" style="
+              height: 15px;
+              width: 15px;
+              vertical-align: sub;
+              border-radius: 3px;
+            "></span>
+          <span class="c-main-i">正确</span>
+        </div>
+        <div class="dp-ib mr5">
+          <span class="dp-ib bc-FF9933" style="
+              height: 15px;
+              width: 15px;
+              vertical-align: sub;
+              border-radius: 3px;
+              border: 1px solid #ff9933;
+            "></span>
+          <span style="color: #ff9933">半对</span>
+        </div>
+        <div class="dp-ib mr5">
+          <span class="dp-ib bc-FF0000" style="
+              height: 15px;
+              width: 15px;
+              vertical-align: sub;
+              border-radius: 3px;
+              border: 1px solid #ff0000;
+            "></span>
+          <span style="color: #ff0000">错误</span>
+        </div>
+        <div class="dp-ib mr5">
+          <span class="dp-ib" style="
+              height: 15px;
+              width: 15px;
+              vertical-align: sub;
+              border-radius: 3px;
+              border: 1px solid #ff9933;
+            "></span>
+          <span>待评</span>
+        </div>
+        <div class="dp-ib">
+          <span class="dp-ib" style="
+              height: 15px;
+              width: 15px;
+              vertical-align: sub;
+              border-radius: 3px;
+              border: 1px solid #ccc;
+            "></span>
+          <span>未答</span>
+        </div>
+      </div><!-- end ngIf: !hideAnswer && $stateParams.openStatus != 1 && $stateParams.openStatus != 0 -->
+      <!-- ngIf: $stateParams.openStatus == 1 -->
+      <!-- ngIf: $stateParams.openStatus == 0 -->
+      <!-- ngIf: $stateParams.openStatus != 1 && $stateParams.openStatus != 0 --><div class="pb10 bc-fff" ng-if="$stateParams.openStatus != 1 &amp;&amp; $stateParams.openStatus != 0" style="">
+        <!-- ngRepeat: exercise in detail.exerNoList --><div ng-repeat="exercise in detail.exerNoList" class="hidden" style="">
+          <div class="p10 ng-binding">
+            一、选择题<span class="c-bbb ng-binding">（30小题
+              60分）</span>
+          </div>
+          <div>
+            <!-- ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  1
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  2
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  3
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  4
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  5
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  6
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  7
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  8
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  9
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  10
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  11
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  12
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  13
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  14
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  15
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  16
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  17
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  18
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  19
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  20
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  21
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  22
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  23
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  24
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  25
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  26
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  27
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  28
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  29
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  30
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak -->
+          </div>
+        </div><!-- end ngRepeat: exercise in detail.exerNoList --><div ng-repeat="exercise in detail.exerNoList" class="hidden">
+          <div class="p10 ng-binding">
+            二、综合题<span class="c-bbb ng-binding">（3小题
+              40分）</span>
+          </div>
+          <div>
+            <!-- ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  31
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  32
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak --><div ng-repeat="item in exercise.exercises_bak" class="fl p5 plr10 w20p tc" ng-click="toDetail(item.exerIndex, item.itemIndex)">
+              <div>
+                <!-- ngIf: ::hideAnswer -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID != 5 -->
+                <!-- ngIf: ::!hideAnswer && $stateParams.sceneID == 5 --><div ng-if="::!hideAnswer &amp;&amp; $stateParams.sceneID == 5" ng-class="{
+                                'bc-main-i bdc-main-i c-fff': item.status == 1,
+                                'bc-FF0000 bdc-red c-fff': item.status == 2,
+                                'bc-FF9933 bdc-f93 c-fff': item.status == 4
+                                }" class="pr dp-ib kt-circle ng-binding bc-main-i bdc-main-i c-fff">
+                  33
+                  <!-- ngIf: item.isComment == 1 -->
+                </div><!-- end ngIf: ::!hideAnswer && $stateParams.sceneID == 5 -->
+              </div>
+              <div></div>
+            </div><!-- end ngRepeat: item in exercise.exercises_bak -->
+          </div>
+        </div><!-- end ngRepeat: exercise in detail.exerNoList -->
+      </div><!-- end ngIf: $stateParams.openStatus != 1 && $stateParams.openStatus != 0 -->
+
+      <!-- <div class="p10 bc-fff mt20 f16 fb c-333" ng-if="recommendList.length>0">
+        可能适合您的课程
+      </div>
+      <ion-list>
+        <ion-item
+          class="item-icon-right"
+          style="padding-left: 96px"
+          ng-repeat="recommend in recommendList"
+          ng-click="openRecommend(recommend)"
+        >
+          <div class="pa l15" style="width: 60px; height: 48px">
+            <img class="img-center-scale" src="{{::recommend.cover}}" />
+          </div>
+          <h2>{{::recommend.title}}</h2>
+          <p class="mt5">
+            {{::recommend.text}}<span class="ml10"
+              >{{::recommend.stuNum}}人在学</span
+            >
+          </p>
+          <i class="icon ion-chevron-right icon-accessory"></i>
+        </ion-item>
+      </ion-list> -->
+    </div><div class="scroll-bar scroll-bar-v"><div class="scroll-bar-indicator scroll-bar-fade-out" style="transform: translate3d(0px, 0px, 0px) scaleY(1); height: 479px;"></div></div></ion-content>
+    <!--<ion-footer-bar class="p0" ng-if="user.info.utype == 1&&type != 'homework'">-->
+    <!--<a class="button button-full w m0 lh44 f16" ng-class="{'bc-main-i c-fff':!detail.hadSend}"-->
+    <!--ng-click="sendTeacher()">{{detail.hadSend?'已发送':'发送给老师'}}</a>-->
+    <!--</ion-footer-bar>-->
+    <!-- ngIf: $stateParams.sceneID != 5&&detail.scanExamType == 2 && type != 'homework' -->
+    <!-- <ion-footer-bar align-title="center" style="padding: 0" ng-if="$stateParams.sceneID == 5">
+            <div class="row">
+                <section class="col center">
+                    <button style="border-width: 1px; max-width: 200px" class="button button-balanced button-outline br25 button-full" ng-click="toKnowledgeDiagnosis()">知识点诊断</button>
+                </section>
+                <section class="col center" ng-if="$stateParams.openStatus != 1">
+                    <a class="button button-balanced br25 button-full w"
+                       ng-click="toExamSituation()">考情分析报告</a>
+                </section>
+            </div>
+        </ion-footer-bar> -->
+  </section></basis-content>
+</ion-view></ion-nav-view>
+</ion-view></ion-nav-view>
+
+
+<div class="backdrop"></div><div class="loading-container"><div class="loading"></div></div><div class="click-block click-block-hide"></div></body></html>
