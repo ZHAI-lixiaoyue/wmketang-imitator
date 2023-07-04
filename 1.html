@@ -7,11 +7,11 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <!--<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, width=device-width">-->
-    <script defer="" src="vendor/fundebug.2.4.2.min.js" apikey="7e434f55a040700062e0238a54376269cc81f5c0f57f367acbb289f50fb90647"></script>
-    <script defer="" src="vendor/bundle.min.js?1002"></script>
-    <script defer="" src="js/app.start.js?2211124124"></script>
-    <link rel="stylesheet" href="css/all.min.css?2211124124">
-    <title>家长云</title><script src="js/ctrl/mainCtrl.js?2211124124" async=""></script><script src="js/services/student/stuCorrect.js?2211124124" async=""></script><script src="js/directive/collapsible-list.js?2211124124" async=""></script><script src="js/ctrl/message/messageCtrl.js?2211124124" async=""></script><script src="js/services/module/activateAccount.js?2211124124" async=""></script><script src="js/ctrl/children/childrenCtrl.js?2211124124" async=""></script><script src="js/ctrl/person/personCtrl.js?2211124124" async=""></script><script src="vendor/angular-chart/Chart.min.js?2211124124" async=""></script><script src="vendor/angular-chart/angular-chart.min.js?2211124124" async=""></script><script src="page/children/studyTrack/studyTrack.js?2211124124" async=""></script><script src="js/ctrl/tfcenter/tfCenterCtrl.js?2211124124" async=""></script><script src="js/ctrl/parent/maintenanceCtrl.js?2211124124" async=""></script><script src="js/ctrl/homeCtrl.js?2211124124" async=""></script><script src="js/services/examSystem.js?2211124124" async=""></script><script src="js/ctrl/children/examSystem/examListCtrl.js?2211124124" async=""></script><script src="js/ctrl/children/examSystem/examInfoCtrl.js?2211124124" async=""></script><script src="js/services/$selectTeacher.js?2211124124" async=""></script><script src="js/services/$openResource-weike.js?2211124124" async=""></script><script src="js/ctrl/children/stuHomeworkTestResultCtrl.js?2211124124" async=""></script><script src="js/directive/dragBox.js?2211124124" async=""></script><script src="js/ctrl/children/testDetailCtrl.js?2211124124" async=""></script>
+    <script defer="" src="./files/fundebug.2.4.2.min.js.下载" apikey="7e434f55a040700062e0238a54376269cc81f5c0f57f367acbb289f50fb90647"></script>
+    <script defer="" src="./files/bundle.min.js.下载"></script>
+    <script defer="" src="./files/app.start.js.下载"></script>
+    <link rel="stylesheet" href="./files/all.min.css?2211124124">
+    <title>家长云</title><script src="./files/smainCtrl.js?2211124124" async=""></script><script src="js/services/student/stuCorrect.js?2211124124" async=""></script><script src="js/directive/collapsible-list.js?2211124124" async=""></script><script src="js/ctrl/message/messageCtrl.js?2211124124" async=""></script><script src="js/services/module/activateAccount.js?2211124124" async=""></script><script src="js/ctrl/children/childrenCtrl.js?2211124124" async=""></script><script src="js/ctrl/person/personCtrl.js?2211124124" async=""></script><script src="vendor/angular-chart/Chart.min.js?2211124124" async=""></script><script src="vendor/angular-chart/angular-chart.min.js?2211124124" async=""></script><script src="page/children/studyTrack/studyTrack.js?2211124124" async=""></script><script src="js/ctrl/tfcenter/tfCenterCtrl.js?2211124124" async=""></script><script src="js/ctrl/parent/maintenanceCtrl.js?2211124124" async=""></script><script src="js/ctrl/homeCtrl.js?2211124124" async=""></script><script src="js/services/examSystem.js?2211124124" async=""></script><script src="js/ctrl/children/examSystem/examListCtrl.js?2211124124" async=""></script><script src="js/ctrl/children/examSystem/examInfoCtrl.js?2211124124" async=""></script><script src="js/services/$selectTeacher.js?2211124124" async=""></script><script src="js/services/$openResource-weike.js?2211124124" async=""></script><script src="js/ctrl/children/stuHomeworkTestResultCtrl.js?2211124124" async=""></script><script src="js/directive/dragBox.js?2211124124" async=""></script><script src="js/ctrl/children/testDetailCtrl.js?2211124124" async=""></script>
 </head>
 <body class="grade-a platform-browser platform-ios platform-ios13 platform-ios13_2 platform-ready">
 <ion-nav-view id="appContainer" animation="slide-left-right" class="view-container" nav-view-transition="ios" nav-view-direction="none" nav-swipe=""><ion-view view-title="家长云" class="pane" state="main" nav-view="active" style="opacity: 1; transform: translate3d(0%, 0px, 0px);">
@@ -26,7 +26,7 @@
   <button class="button button-clear pa t10 c-fff" ng-click="toggleChildList()" style="height: 35px; line-height: 39px; padding: 0; left: 10px">
     <img ng-src="https://api.jiazhangyun.cn/public/school/images/default_head_s.png" class="w30 br50p fl mr5" style="margin-top: 4px" src="https://api.jiazhangyun.cn/public/school/images/default_head_s.png">
     <div class="dp-ib va-m ws-no hidden to-ellipsis ng-binding" style="max-width: 50px">
-      黎振悦
+      
     </div>
   </button>
   <span class="children-head-btn ell ng-binding" style="
@@ -36,7 +36,7 @@
       border: 0;
       font-size: 16px;
     ">
-    茂名市博雅中学
+    
   </span>
   <!--<span class="children-head-btn" ng-if="user.childS.realName && user.childS.gradeID && user.info.children.length > 0 && user.childS.ktinfo">
         <span class="item-left" ng-class="{active: !typeTab}" ng-click="changeTypeTab(0)">
@@ -557,7 +557,7 @@
     <ion-list class="disable-user-behavior"><div class="list">
       <!-- ngRepeat: child in user.info.children --><ion-item ng-repeat="child in user.info.children" class="item-avatar-left item-icon-right item" ng-click="selectChild($index)">
         <img ng-src="https://api.jiazhangyun.cn/public/school/images/default_head_s.png" fall-back-src="img/default/default_head.jpg" src="https://api.jiazhangyun.cn/public/school/images/default_head_s.png">
-        <div class="lh40 ng-binding">黎振悦</div>
+        <div class="lh40 ng-binding"></div>
         <!-- <p>{{child.school}}</p> -->
         <i class="icon ion-ios-arrow-right c-999"></i>
       </ion-item><!-- end ngRepeat: child in user.info.children -->
