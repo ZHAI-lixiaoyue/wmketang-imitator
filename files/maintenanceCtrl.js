@@ -1,0 +1,1 @@
+angular.controllers.controller("maintenanceCtrl",["$scope","user","$state","prompt",function(n,r,t,e){}]);
